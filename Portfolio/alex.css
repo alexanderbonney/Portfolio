@@ -1,0 +1,946 @@
+.footer1 {
+    position: absolute;
+    background-color: rgba(30, 31, 39, 1);
+    width: 1340px;
+    height: 89px;
+    top: 4220px;
+}
+.footer2 {
+    position: absolute;
+    background-color: rgba(67, 69, 94, 1);
+    width: 1340px;
+    height: 327px;
+    top: 3893px;
+}
+#footxt a {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+    text-decoration: none;
+}
+#footxt a:hover {
+    color: red;
+}
+.termsAndConditions {
+    position: absolute;
+    left: 906.21px;
+    top: 4246px;
+}
+.allRightReserved {
+    position: absolute;
+    left: 583.49px;
+    top: 4246px;
+}
+.xa2b3960c {
+    position: absolute;
+    left: 302.99px;
+    top: 4246px;
+}
+.photographyAndVideography {
+    position: absolute;
+    left: 160.55px;
+    top: 4148px;
+}
+.graphicAndVisualDesign {
+    position: absolute;
+    left: 158.93px;
+    top: 4116px;
+}
+.uiUxDesign {
+    position: absolute;
+    left: 160.49px;
+    top: 4080px;
+}
+.animation {
+    position: absolute;
+    left: 160.58px;
+    top: 4048px;
+}
+.marketingAndBranding {
+    position: absolute;
+    left: 160.71px;
+    top: 4016px;
+}
+.websiteAndMobileAppDevelopment {
+    position: absolute;
+    left: 160.29px;
+    top: 3984px;
+}
+.services33b3287a {
+    position: absolute;
+    left: 170.35px;
+    top: 3938px;
+}
+.whereToFindUs {
+    position: absolute;
+    left: 903.03px;
+    top: 3938px;
+}
+.ghanaAccra {
+    position: absolute;
+    left: 904px;
+    top: 3985px;
+}
+.tessano {
+    position: absolute;
+    width: 65px;
+    height: 21px;
+    left: 904.11px;
+    top: 4007px;
+}
+.socialNetworks {
+    position: absolute;
+    width: 171px;
+    height: 21px;
+    left: 956.72px;
+    top: 4138px;
+}
+#ellipse {
+    opacity: 0.5;
+}
+#socialicons img {
+    width: 25px;
+    height: 25px;
+    top: 4178px;
+}
+.ellipse1 {
+    position: absolute;
+    left: 1163.58px;
+}
+.ellipse2 {
+    position: absolute;
+    left: 1086.58px;
+}
+.ellipse3 {
+    position: absolute;
+    left: 1020.95px;
+}
+.ellipse4 {
+    position: absolute;
+    left: 962.89px;
+}
+.ellipse6 {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    left: 1274px;
+    top: 169.5px;
+}
+.ellipse7 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 352px;
+    top: 577.5px;
+}
+.ellipse8 {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    left: 602px;
+    top: 554.5px;
+}
+.ellipse9 {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 1255px;
+    top: 575.5px;
+}
+.ellipse10 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 558px;
+    top: 183.5px;
+}
+.ellipse11 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 563px;
+    top: 627.5px;
+}
+.ellipse12 {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    left: 549.5px;
+    top: 2687.5px;
+}
+.ellipse13 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 356.5px;
+    top: 2866.5px;
+}
+.ellipse14 {
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    left: 1047.5px;
+    top: 2682.5px;
+}
+.ellipse15 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 446.5px;
+    top: 3118.5px;
+}
+.ellipse16 {
+    position: absolute;
+    width: 73px;
+    height: 73px;
+    left: 330px;
+    top: 2703.5px;
+}
+.ellipse17 {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    left: 521.5px;
+    top: 2984.5px;
+}
+.ellipse18 {
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    left: 1229.5px;
+    top: 3137.5px;
+}
+.ellipse19 {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    left: 359px;
+    top: 1798.5px;
+}
+.ellipse20 {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    left: 388px;
+    top: 1485.5px;
+}
+.ellipse21 {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    left: 921px;
+    top: 1478.5px;
+}
+.ellipse22 {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 526px;
+    top: 1554.5px;
+}
+.ellipse23 {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    left: 1066px;
+    top: 1388.5px;
+}
+.ellipse24 {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 514px;
+    top: 1828.5px;
+}
+.ellipse25 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 743px;
+    top: 1773.5px;
+}
+.ellipse26 {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    left: 803px;
+    top: 2086.5px;
+}
+.ellipse27 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 627px;
+    top: 2229.5px;
+}
+.ellipse28 {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    left: 637px;
+    top: 2067.5px;
+}
+.ellipse29 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 368px;
+    top: 2465.5px;
+}
+.ellipse30 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 481.5px;
+    top: 2055.5px;
+}
+.ellipse31 {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    left: 742px;
+    top: 2367.5px;
+}
+.ellipse32 {
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    left: 1006px;
+    top: 2501.5px;
+}
+.ellipse33 {
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    left: 475px;
+    top: 3378.5px;
+}
+.ellipse34 {
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    left: 1160px;
+    top: 3746.5px;
+}
+.ellipse35 {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 966px;
+    top: 3319.5px;
+}
+.ellipse36 {
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    left: 251.25px;
+    top: 3314.5px;
+}
+.ellipse37 {
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    left: 403px;
+    top: 3726.5px;
+}
+.ellipse38 {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    left: 634px;
+    top: 3593.5px;
+}
+.ellipse39 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    left: 510.25px;
+    top: 3751.5px;
+}
+.ellipse40 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 883px;
+    top: 19px;
+}
+.ellipse41 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 927px;
+    top: 19px;
+}
+.ellipse42 {
+    position: absolute;
+    width: 59px;
+    height: 59px;
+    left: 969px;
+    top: 19px;
+}
+.ellipse43 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 1012px;
+    top: 22px;
+}
+.ellipse44 {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 394px;
+    top: 1199.5px;
+}
+.ellipse45 {
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 695px;
+    top: 1173.5px;
+}
+.ellipse46 {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    left: 684px;
+    top: 933.5px;
+}
+.ellipse47 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 209px;
+    top: 922.5px;
+}
+.ellipse48 {
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    left: 646px;
+    top: 812.5px;
+}
+.ellipse49 {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    left: 880px;
+    top: 759.5px;
+}
+.ellipse50 {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    left: 471px;
+    top: 979.5px;
+}
+.contactUsb2796cfd {
+    position: absolute;
+    color: rgba(195, 214, 233, 1);
+    font-size: 22px;
+    font-weight: 700;
+    font-family: Georgia, Arial;
+    width: 153px;
+    height: 25px;
+    left: 543px;
+    top: 3938px;
+}
+.deepDigs {
+    position: absolute;
+    color: rgba(195, 214, 233, 1);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+    width: 178px;
+    height: 21px;
+    left: 551.5px;
+    top: 3981px;
+}
+.branfluenzars {
+    position: absolute;
+    color: rgba(195, 214, 233, 1);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+    width: 212px;
+    height: 21px;
+    left: 550.44px;
+    top: 4006px;
+}
+.x23387178232 {
+    position: absolute;
+    color: rgba(195, 214, 233, 1);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+    width: 132px;
+    height: 21px;
+    left: 553.88px;
+    top: 4067px;
+}
+.x23323334223 {
+    position: absolute;
+    color: rgba(195, 214, 233, 1);
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+    width: 139px;
+    height: 21px;
+    left: 551px;
+    top: 4093px;
+}
+.b32 {
+    position: absolute;
+    background-image: url(assets/b32.png);
+    background-size: cover;
+    width: 42px;
+    height: 42px;
+    left: 509.27px;
+    top: 4067px;
+    border-color: rgba(112, 112, 112, 1);
+    border-width: 1px;
+}
+.ellipse5 {
+    position: absolute;
+    width: 71px;
+    height: 72px;
+    left: 57.5px;
+    top: 4002px;
+}
+#headertxt a {
+    color: rgba(67, 69, 94, 1);
+    font-size: 21px;
+    font-weight: 700;
+    font-family: Georgia, Arial;
+    text-decoration: none;
+    height: 24px;
+}
+#headertxt a:hover {
+    color: red;
+}
+.home {
+    position: absolute;
+    left: 281px;
+    top: 31px;
+}
+.services {
+    position: absolute;
+    left: 361px;
+    top: 31px;
+}
+.about {
+    position: absolute;
+    left: 471px;
+    top: 31px;
+}
+.projects {
+    position: absolute;
+    left: 562px;
+    top: 31px;
+    color: gold;
+}
+.contacts {
+    position: absolute;
+    left: 684px;
+    top: 30px;
+}
+.branfluenzas {
+    position: absolute;
+    font-family: HardlyWorthit, Arial;
+    left: 68px;
+    top: 29px;
+}
+.xxx {
+    position: absolute;
+    background-image: url(assets/xxx.png);
+    background-size: cover;
+    width: 92px;
+    height: 92px;
+    left: -16px;
+    top: 0;
+    border-color: rgba(112, 112, 112, 1);
+    border-width: 1px;
+}
+.line1 {
+    position: absolute;
+    opacity: 0.2;
+    width: 3px;
+    height: 50px;
+    left: 252.5px;
+    top: 18px;
+    background-color: #000;
+}
+.teamManagementApp {
+    position: absolute;
+    color: rgba(67, 69, 94, 1);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Goudy Old Style", Arial;
+    width: 493px;
+    height: 56px;
+    left: 66px;
+    top: 285px;
+}
+.line3 {
+    position: absolute;
+    width: 130px;
+    height: 33px;
+    left: 73px;
+    top: 254px;
+    background-color: #000;
+}
+#Lorem {
+    color: rgba(67, 69, 94, 1);
+    font-size: 23px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+}
+.text6 {
+    position: absolute;
+    width: 667px;
+    left: 64px;
+    top: 377px;
+}
+.text {
+    position: absolute;
+    width: 653px;
+    left: 73px;
+    top: 986px;
+}
+.text4 {
+    position: absolute;
+    width: 655px;
+    left: 64px;
+    top: 1610px;
+}
+.text3 {
+    position: absolute;
+    width: 665px;
+    left: 75px;
+    top: 2263px;
+}
+.text5 {
+    position: absolute;
+    width: 539px;
+    left: 68px;
+    top: 2904px;
+}
+.text1 {
+    position: absolute;
+    width: 548px;
+    left: 61px;
+    top: 3512px;
+}
+#Button {
+    background-color: rgba(0, 0, 0, 1);
+    width: 216.73px;
+    height: 54.24px;
+    color: rgba(236, 236, 236, 1);
+    font-size: 19px;
+    font-weight: 700;
+    font-family: Georgia, Arial;
+    border-radius: 8px;
+}
+#Button:hover {
+    border-style: solid;
+    border-color: #fff;
+    border-width: 2px;
+    border-radius: 8px;
+    background: #434343;
+    letter-spacing: 1px;
+    transition: all 0.4s ease 0s;
+}
+.Btn1 {
+    position: absolute;
+    left: 78.34px;
+    top: 3095.79px;
+}
+.Btn3 {
+    position: absolute;
+    left: 82.34px;
+    top: 2461.79px;
+}
+.Btn {
+    position: absolute;
+    left: 65px;
+    top: 554.38px;
+}
+.Btn4 {
+    position: absolute;
+    left: 65.34px;
+    top: 3732.79px;
+}
+.Btn2 {
+    position: absolute;
+    left: 74px;
+    top: 1781.38px;
+}
+.Btn5 {
+    position: absolute;
+    left: 76px;
+    top: 1162px;
+}
+.weatherSite {
+    position: absolute;
+    color: rgba(67, 69, 94, 1);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Goudy Old Style", Arial;
+    width: 265px;
+    height: 56px;
+    left: 68px;
+    top: 2817px;
+}
+.line4 {
+    position: absolute;
+    width: 118px;
+    height: 5px;
+    left: 75px;
+    top: 2796px;
+    background-color: #000;
+}
+.bodyMassIndex {
+    position: absolute;
+    color: rgba(67, 69, 94, 1);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Goudy Old Style", Arial;
+    width: 360px;
+    height: 56px;
+    left: 64px;
+    top: 1527px;
+}
+.line5 {
+    position: absolute;
+    width: 118px;
+    height: 5px;
+    left: 70px;
+    top: 1506px;
+    background-color: #000;
+}
+.eCommerceSite {
+    position: absolute;
+    color: rgba(67, 69, 94, 1);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Goudy Old Style", Arial;
+    width: 350px;
+    height: 56px;
+    left: 80px;
+    top: 2180px;
+}
+.line6 {
+    position: absolute;
+    width: 118px;
+    height: 5px;
+    left: 82px;
+    top: 2161px;
+    background-color: #000;
+}
+.android9177c0e5 {
+    position: absolute;
+    color: rgba(67, 69, 94, 1);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+    width: 76px;
+    height: 19px;
+    left: 242px;
+    top: 2087px;
+}
+.websiteForZoos {
+    position: absolute;
+    color: rgba(67, 69, 94, 1);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Goudy Old Style", Arial;
+    width: 335px;
+    height: 56px;
+    left: 63px;
+    top: 3430px;
+}
+.line7 {
+    position: absolute;
+    width: 118px;
+    height: 5px;
+    left: 65px;
+    top: 3414px;
+    background-color: #000;
+}
+#desktop {
+    background-size: cover;
+    width: 566.67px;
+    height: 340px;
+    border-color: rgba(112, 112, 112, 1);
+    border-width: 1px;
+}
+.deskPic1 {
+    position: absolute;
+    background-image: url(assets/group38.png);
+    left: 738px;
+    top: 2765px;
+}
+.deskPic {
+    position: absolute;
+    background-image: url(assets/group39.png);
+    left: 743px;
+    top: 3380px;
+}
+.a48 {
+    position: absolute;
+    background-image: url(assets/a48.png);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    left: 888px;
+    top: 23px;
+    border-color: rgba(112, 112, 112, 1);
+    border-width: 1px;
+}
+.transactionApp {
+    position: absolute;
+    color: rgba(67, 69, 94, 1);
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Goudy Old Style", Arial;
+    width: 343px;
+    height: 56px;
+    left: 71px;
+    top: 881px;
+}
+.line8 {
+    position: absolute;
+    width: 118px;
+    height: 5px;
+    left: 75px;
+    top: 860px;
+    background-color: #000;
+}
+.lineA {
+    position: absolute;
+    width: 118px;
+    height: 5px;
+    left: 70px;
+    top: 270px;
+    background-color: #000;
+}
+.iconAwesomeArrowUp {
+    position: absolute;
+    width: 27.77px;
+    height: 28.5px;
+    left: 73.5px;
+    top: 4018px;
+}
+#Cont {
+    height: 540px;
+    left: 0;
+    border-radius: 8px;
+    width: 1348px;
+}
+.container3 {
+    position: absolute;
+    background-color: rgba(238, 189, 196, 1);
+    top: 1372px;
+}
+.container5 {
+    position: absolute;
+    background-color: rgba(149, 166, 201, 1);
+    top: 2658px;
+}
+.container4 {
+    position: absolute;
+    background-color: rgba(176, 234, 236, 1);
+    top: 2025px;
+}
+.container2 {
+    position: absolute;
+    background-color: rgba(240, 238, 255, 1);
+    top: 749px;
+}
+.container6 {
+    position: absolute;
+    background-color: rgba(75, 239, 189, 1);
+    top: 3281px;
+}
+.container1 {
+    position: absolute;
+    background-color: rgba(255, 238, 238, 1);
+    top: 136px;
+}
+#bttn {
+    background-color: transparent;
+    color: rgba(67, 69, 94, 1);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Georgia, Arial;
+    width: 114px;
+    height: 45px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 4px;
+}
+#bgPhone {
+    background-size: cover;
+    width: 221.13px;
+    height: 443px;
+    border-color: rgba(112, 112, 112, 1);
+    border-width: 1px;
+    border-radius: 36px;
+}
+.Phone3B {
+    position: absolute;
+    background-image: url(assets/group23.png);
+    left: 820px;
+    top: 180px;
+}
+.PhoneB {
+    position: absolute;
+    background-image: url(assets/group28.png);
+    left: 1055px;
+    top: 800px;
+}
+.Phone1B {
+    position: absolute;
+    background-image: url(assets/x01IphoneX01ClayDark.png);
+    left: 850px;
+    top: 1421px;
+}
+.Phone2B {
+    position: absolute;
+    background-image: url(assets/group32.png);
+    left: 1099px;
+    top: 2061px;
+}
+.Sphone2 {
+    position: absolute;
+    background-image: url(assets/group25.png);
+    left: 1066px;
+    top: 214px;
+}
+.Sphone {
+    position: absolute;
+    background-image: url(assets/x01IphoneX01ClayColor.png);
+    left: 841px;
+    top: 845px;
+}
+.Sphone1 {
+    position: absolute;
+    background-image: url(assets/asset1.png);
+    left: 1110px;
+    top: 1466px;
+}
+.Sphone3 {
+    position: absolute;
+    background-image: url(assets/x03Iphone8FrontClayWhite.png);
+    left: 894px;
+    top: 2095px;
+}
+#smPhone {
+    background-size: cover;
+    width: 183.33px;
+    height: 385px;
+    border-color: rgba(112, 112, 112, 1);
+    border-width: 1px;
+    border-radius: 36px;
+}
