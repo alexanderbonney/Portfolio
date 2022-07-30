@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+* {
+    font-family: 'poppins', 'sans-serif';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    background: hsl(217, 54%, 11%);
+    min-height: 100vh;
+    @include flex();
+}
+
+.container {
+    background: hsl(216, 50%, 16%);
+    width: 330px;
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 20px;
+
+    & .image {
+        position: relative;
+        width: 100%;
+        height: 270px;
+        max-height: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+
+        &:hover .back { 
+            opacity: .5;
+            visibility: visible;
+        }
+
+        & .front, & .back {
+           position: absolute;
+           width: 100%;
+           height: 100%;
+            
+
+            & img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+            }
+        }
+
+        & .back {
+            position: relative;
+            background: hsl(178, 100%, 50%);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 3;
+            
+             & img {
+                 transform: scale(.2);
+             }
+         }
+
+    }
+
+    & .contentBox {
+        position: relative;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-family: 'Outfit', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: hsl(0, 0%, 100%);
+        letter-spacing: 1px;
+
+        & h2 {
+            font-size: 18px;
+            font-weight: 600;
+            transition: .5s;
+            cursor: pointer;
+
+            &:hover {
+                color: hsl(178, 100%, 50%);
+            }
+        }
+
+        & p {
+            color: hsl(215, 51%, 70%);
+            font-size: 14.5px;
+        }
+
+        & .feature {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid hsl(215, 51%, 70%);
+
+            & div {
+                display: flex;
+                align-items: center;
+
+                & img {
+                    margin-right: 4px;
+                }
+
+                & p.cyan {
+                    color: hsl(178, 100%, 50%);
+                    font-weight: 600;
+                }
+            }
+        }
+
+        & .footer {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 78%;
+            // padding-top: 20px;
+            // border-top: .2px solid hsl(215, 51%, 70%);
+
+            & .imgBox {
+                position: relative;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border: 1.5px solid hsl(0, 0%, 100%);
+
+                & img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            & p a {
+                color: hsl(0, 0%, 100%);
+                text-decoration: none;
+                transition: .5s;
+
+                &:hover {
+                    color: hsl(178, 100%, 50%);
+                }
+            }
+
+            & .ft {
+                font-size: 12.5px;
+            }
+        }
+    }
+
+}
