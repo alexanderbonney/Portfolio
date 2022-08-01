@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Raleway:wght@400;700&display=swap");
+* {
+  font-family: "poppins", "sans-serif";
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input {
+  border: 1px solid hsl(238deg, 22%, 44%);
+  border-radius: 4px;
+  outline: none;
+}
+
+button {
+  border-radius: 4px;
+}
+
+section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+section header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 50px 10px;
+}
+section header img {
+  width: 130px;
+}
+section header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+section header ul li {
+  list-style: none;
+  margin: 0 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+section header ul li:hover {
+  color: hsl(224deg, 93%, 58%);
+}
+section main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+section main .curve img {
+  width: 100%;
+  margin-bottom: -8px;
+}
+section main .card-1 {
+  position: relative;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+}
+section main .card-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(240deg, 75%, 98%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+section main .card {
+  margin-bottom: 50px;
+  padding: 50px;
+}
+section main .card, section main .card-1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+section main .card .content, section main .card-1 .content {
+  position: relative;
+  width: 50%;
+}
+section main .card .content .link a, section main .card-1 .content .link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: hsl(170deg, 45%, 43%);
+  text-decoration: none;
+  font-size: 15px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid hsl(170deg, 45%, 43%);
+  max-width: 170px;
+}
+section main .card .content .link a:hover, section main .card-1 .content .link a:hover {
+  opacity: 0.7;
+}
+section main .card .content .link a img, section main .card-1 .content .link a img {
+  margin-left: 5px;
+}
+section main .card .content h2, section main .card-1 .content h2 {
+  font-size: 2.3em;
+  font-family: "Open Sans", sans-serif;
+  font-family: 400;
+  color: hsl(243deg, 87%, 12%);
+  margin-bottom: 20px;
+}
+section main .card .content p, section main .card-1 .content p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 2em;
+  color: hsl(238deg, 22%, 44%);
+}
+section main .card .content div input, section main .card-1 .content div input {
+  width: 50%;
+  padding: 10px;
+}
+section main .card .content div button, section main .card-1 .content div button {
+  width: 40%;
+  padding: 10px;
+  background: hsl(224deg, 93%, 58%);
+  color: #fff;
+  border: 2px solid hsl(224deg, 93%, 58%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+section main .card .content div button:hover, section main .card-1 .content div button:hover {
+  opacity: 0.7;
+}
+section main .card .content .card-quotes, section main .card-1 .content .card-quotes {
+  position: relative;
+  background: #fff;
+  width: 350px;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-shadow: -4px 5px 17px -1px rgba(0, 0, 0, 0.1), 1px -2px 9px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: -4px 5px 17px -1px rgba(0, 0, 0, 0.1), 1px -2px 9px 0px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  margin-top: 60px;
+}
+section main .card .content .card-quotes p, section main .card-1 .content .card-quotes p {
+  font-size: 13px;
+}
+section main .card .content .card-quotes .imgBox, section main .card-1 .content .card-quotes .imgBox {
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+}
+section main .card .content .card-quotes .imgBox.quotes, section main .card-1 .content .card-quotes .imgBox.quotes {
+  width: 25px;
+  height: 25px;
+}
+section main .card .content .card-quotes .imgBox.footer, section main .card-1 .content .card-quotes .imgBox.footer {
+  width: 35px;
+  height: 35px;
+}
+section main .card .content .card-quotes .imgBox img, section main .card-1 .content .card-quotes .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section main .card .content .card-quotes .card-footer, section main .card-1 .content .card-quotes .card-footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section main .card .content .card-quotes .card-footer .card-footer-text, section main .card-1 .content .card-quotes .card-footer .card-footer-text {
+  position: relative;
+  margin-left: 10px;
+  height: 43px;
+  overflow: hidden;
+}
+section main .card .content .card-quotes .card-footer .card-footer-text p, section main .card-1 .content .card-quotes .card-footer .card-footer-text p {
+  font-size: 13px;
+}
+section main .card .imgBox, section main .card-1 .imgBox {
+  position: relative;
+  width: 50%;
+  height: 500px;
+}
+section main .card .imgBox img, section main .card-1 .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+section .contact {
+  background: hsla(238deg, 22%, 44%, 0.9);
+  padding: 75px 75px 75px 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+section .contact div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: auto;
+  gap: 10%;
+}
+section .contact div .contentBox {
+  position: relative;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+section .contact div .contentBox h2 {
+  font-size: 2.2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+section .contact div .contentBox p {
+  line-height: 1.8em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(0deg, 0%, 90%);
+}
+section .contact div .inputBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: 60%;
+}
+section .contact div .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+section .contact div .inputBox button {
+  position: relative;
+  background: hsl(224deg, 93%, 58%);
+  width: 200px;
+  border: none;
+  padding: 15px 20px;
+  color: #fff;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+section .contact div .inputBox button:hover {
+  background: hsl(224deg, 93%, 68%);
+}
+section footer {
+  position: relative;
+  padding: 50px;
+  color: hsl(0deg, 0%, 75%);
+  background: hsl(243deg, 87%, 12%);
+}
+section footer .lo {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+section footer div {
+  display: grid;
+  grid-template-columns: 400px 200px 200px 300px;
+}
+section footer div ul {
+  position: relative;
+}
+section footer div ul.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section footer div ul.icons li {
+  height: 35px;
+  width: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+section footer div ul.icons li:hover {
+  border: 1px solid hsl(224deg, 93%, 58%);
+}
+section footer div ul.icons li:hover i {
+  color: hsl(224deg, 93%, 58%);
+}
+section footer div ul.icons li i {
+  color: #fff;
+}
+section footer div ul li {
+  list-style: none;
+  margin: 20px;
+  width: 100%;
+}
+section footer div ul li img {
+  margin-right: 12px;
+}
+section footer div ul li a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 75%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+section footer div ul li a:hover {
+  color: hsl(224deg, 93%, 58%);
+}
+
+@media (max-width: 1116px) {
+  section footer div {
+    grid-template-columns: 300px 170px 170px 170px;
+  }
+}
+@media (max-width: 1020px) {
+  section footer div {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 40px;
+    grid-column-gap: 150px;
+  }
+  section footer div ul:first-child {
+    width: 140%;
+  }
+  section .contact div {
+    gap: 6%;
+  }
+}
+@media (max-width: 925px) {
+  section main .card,
+section main .card-1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section main .card .imgBox,
+section main .card-1 .imgBox,
+section main .card .content,
+section main .card-1 .content {
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section main .card .content p,
+section main .card-1 .content p {
+    width: 80%;
+  }
+  main .card .content div {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  section main .card .content div input,
+section main .card-1 .content div input,
+section main .card .content div button,
+section main .card-1 .content div button {
+    width: 80%;
+  }
+  section main .card .content .card-quotes,
+section main .card-1 .content .card-quotes {
+    width: 650px;
+    max-width: 100%;
+  }
+  section main .card .content .card-quotes p,
+section main .card-1 .content .card-quotes p {
+    width: 100%;
+  }
+  section .contact div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .contact div .contentBox,
+section .contact div .inputBox {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  section .contact div .contentBox input, section .contact div .contentBox button,
+section .contact div .inputBox input,
+section .contact div .inputBox button {
+    width: 80%;
+  }
+  section footer div {
+    grid-column-gap: 100px;
+  }
+}
+@media (max-width: 730px) {
+  section footer div {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 0px;
+  }
+  section footer div ul:first-child {
+    width: 100%;
+  }
+  section footer div ul li {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  section header {
+    padding: 20px 50px 10px;
+    z-index: 2;
+  }
+  section header ul.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: hsl(240deg, 75%, 98%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  section header ul.navigation.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section header .toggle {
+    height: 50px;
+    width: 50px;
+    background: url("/images/menu (1).png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    z-index: 3;
+  }
+  section header .toggle.active {
+    background: url("/images/close (1).png");
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+  }
+}
