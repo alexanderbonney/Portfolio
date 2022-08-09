@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: hsl(204deg, 43%, 93%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+}
+main .card-container {
+  position: relative;
+  width: 700px;
+  max-width: 100%;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 8px;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+main .card-container .top {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px;
+}
+main .card-container .top h1 {
+  color: hsl(179deg, 62%, 43%);
+  font-family: "Karla", sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+}
+main .card-container .top h2 {
+  color: hsl(71deg, 73%, 54%);
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+main .card-container .top p {
+  color: hsl(218deg, 22%, 67%);
+  font-size: 1em;
+  line-height: 1.6em;
+}
+main .card-container .bottom {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 55%;
+  color: #fff;
+}
+main .card-container .bottom .left {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 30px;
+  height: 100%;
+  width: 50%;
+  background: hsl(179deg, 62%, 43%);
+}
+main .card-container .bottom .left div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 50%;
+  width: 100%;
+  height: 100%;
+}
+main .card-container .bottom .left div h3 {
+  font-weight: 700;
+}
+main .card-container .bottom .left div p {
+  color: hsl(204deg, 43%, 93%);
+}
+main .card-container .bottom .left div .left-text {
+  position: relative;
+  padding: 0;
+  width: 50%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .card-container .bottom .left div .left-text h3 {
+  font-size: 2em;
+  font-weight: 700;
+}
+main .card-container .bottom .left div .left-text p {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
+main .card-container .bottom .left .button {
+  position: relative;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+main .card-container .bottom .left .button input[type=button] {
+  width: 85%;
+  background: hsl(71deg, 73%, 54%);
+  outline: none;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+main .card-container .bottom .left .button input[type=button]:hover {
+  background: hsl(71deg, 73%, 60%);
+}
+main .card-container .bottom .right {
+  position: relative;
+  width: 50%;
+  background: #4ABEBD;
+  padding: 30px;
+}
+main .card-container .bottom .right h3 {
+  margin-top: 13px;
+  font-weight: 700;
+}
+main .card-container .bottom .right ul {
+  position: relative;
+  margin-top: 20px;
+}
+main .card-container .bottom .right ul li {
+  list-style: none;
+  font-size: 0.9em;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.6705882353);
+}
+main .card-container .bottom .right ul li:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  main .card-container {
+    width: 570px;
+  }
+  main .card-container .bottom .left div .left-text {
+    width: 65%;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding: 50px;
+  }
+  main .card-container {
+    width: 90%;
+    height: 900px;
+  }
+  main .card-container .top {
+    height: 33.33%;
+  }
+  main .card-container .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 66.67%;
+  }
+  main .card-container .bottom .left, main .card-container .bottom .right {
+    width: 100%;
+  }
+  main .card-container .bottom .left div .left-text {
+    width: 150px;
+  }
+}
+@media (max-width: 500px) {
+  main .card-container {
+    height: 1000px;
+  }
+  main .card-container .bottom .left .button {
+    height: 80%;
+  }
+  main .card-container {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  main .card-container .top {
+    height: 40%;
+  }
+  main .card-container .bottom {
+    height: 60%;
+  }
+  main {
+    padding: 20px;
+  }
+  main .card-container {
+    height: 1100px;
+  }
+}
