@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  background-color: hsl(0deg, 0%, 81%);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px;
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 2em;
+  grid-template-areas: "one one two three" "four five five three";
+}
+.grid-container .grid-card {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  color: hsl(0deg, 0%, 100%);
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  gap: 0.8em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+.grid-container .grid-card:hover .top .imgBox {
+  border: 2px solid hsl(0deg, 0%, 100%);
+}
+.grid-container .grid-card:hover p {
+  color: #fff;
+}
+.grid-container .grid-card:nth-child(1) {
+  position: relative;
+  grid-area: one;
+  overflow: hidden;
+}
+.grid-container .grid-card:nth-child(1):hover .top .imgBox {
+  border: 2px solid hsl(0deg, 0%, 100%);
+}
+.grid-container .grid-card:nth-child(1):hover p, .grid-container .grid-card:nth-child(1):hover h5 {
+  color: hsl(0deg, 0%, 100%);
+}
+.grid-container .grid-card:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 60%;
+  width: 100%;
+  height: 100%;
+  background: url(/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.grid-container .grid-card:nth-child(1) .top .imgBox {
+  overflow: hidden;
+  border: 2px solid hsl(263deg, 55%, 72%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(1) h4 {
+  z-index: 10;
+}
+.grid-container .grid-card:nth-child(1) h5 {
+  color: hsl(263deg, 55%, 72%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(1) p {
+  color: hsl(263deg, 55%, 82%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(2) {
+  grid-area: two;
+}
+.grid-container .grid-card:nth-child(3) {
+  grid-area: three;
+}
+.grid-container .grid-card:nth-child(3):hover h5, .grid-container .grid-card:nth-child(3):hover p {
+  color: hsl(217deg, 19%, 35%);
+}
+.grid-container .grid-card:nth-child(3):hover .top .imgBox {
+  border: 2px solid hsl(263deg, 55%, 52%);
+}
+.grid-container .grid-card:nth-child(3) h4 {
+  color: hsl(217deg, 19%, 35%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(3) h5 {
+  color: hsl(217deg, 19%, 75%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(3) p {
+  color: hsl(217deg, 19%, 50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(4) {
+  grid-area: four;
+}
+.grid-container .grid-card:nth-child(4):hover h5, .grid-container .grid-card:nth-child(4):hover p {
+  color: hsl(217deg, 19%, 35%);
+}
+.grid-container .grid-card:nth-child(4):hover .top .imgBox {
+  border: 2px solid hsl(263deg, 55%, 52%);
+}
+.grid-container .grid-card:nth-child(4) h4 {
+  color: hsl(217deg, 19%, 35%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(4) h5 {
+  color: hsl(217deg, 19%, 75%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(4) p {
+  color: hsl(217deg, 19%, 50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card:nth-child(5) {
+  grid-area: five;
+}
+.grid-container .grid-card .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.grid-container .grid-card .top .imgBox {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border: 2px solid hsl(263deg, 55%, 72%);
+  border-radius: 50%;
+}
+.grid-container .grid-card .top .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card .top .imgBox img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.grid-container .grid-card p {
+  font-size: 0.8em;
+  line-height: 1.7em;
+  color: hsl(263deg, 55%, 90%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.grid-container .grid-card h5 {
+  color: hsl(0deg, 0%, 70%);
+}
+.grid-container .grid-card:nth-child(1) {
+  background: hsl(263deg, 55%, 52%);
+}
+.grid-container .grid-card:nth-child(2) {
+  background: hsl(217deg, 19%, 35%);
+}
+.grid-container .grid-card:nth-child(3) {
+  background: hsl(0deg, 0%, 100%);
+}
+.grid-container .grid-card:nth-child(4) {
+  background: hsl(0deg, 0%, 100%);
+}
+.grid-container .grid-card:nth-child(5) {
+  background: hsl(219deg, 29%, 14%);
+}
+
+@media (max-width: 1116px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "one one two" "four five five" "three three three";
+  }
+}
+@media (max-width: 960px) {
+  .grid-card {
+    position: relative;
+  }
+  .grid-card .top .heading h4 {
+    font-size: 0.85em;
+  }
+  .grid-card .top .heading h5 {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 750px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "one" "two" "four" "five" "three";
+  }
+}
+@media (max-width: 420px) {
+  section {
+    padding: 30px 10px;
+  }
+}
