@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@mixin flex ($i) {
+    display: flex;
+    justify-content: $i;
+    align-items: center;
+    flex-direction: column;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    background: hsl(270, 20%, 96%);
+    overflow: hidden;
+    @include flex(center);
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: -50px;
+        width: 35%;
+        height: 90%;
+        background: linear-gradient(150deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+        border-bottom-left-radius: 265px;
+        border-bottom-right-radius: 265px;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        right: -110px;
+        width: 30%;
+        height: 85%;
+        background: linear-gradient(150deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+        border-top-left-radius: 265px;
+        border-top-right-radius: 265px;
+        opacity: .04;
+    }
+
+    & section {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        width: 1000px;
+        height: 100%;
+
+        & .phone {
+            position: relative;
+            width: 30%;
+            max-width: 100%;
+            height: 600px;
+            border: 12px solid hsl(0, 0%, 100%);
+            border-radius: 32px;
+            background: hsl(270, 20%, 96%);
+            box-shadow: 20px 20px 35px rgba(0, 0, 0, .09);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: -14px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: hsl(0, 0%, 100%);
+                width: 55%;
+                height: 40px;
+                border-radius: 20px;
+                z-index: 2;
+            }
+
+            & .phone-header {
+                position: relative;
+                width: 100%;
+                height: 15%;
+                z-index: 1;
+                background: linear-gradient(to left, hsl(293, 100%, 63%),
+                        hsl(264, 100%, 61%));
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 2em 1em 0 1em;
+                border-radius: 25px 25px 8px 8px;
+                box-shadow: 12px 15px 33px rgba(0, 0, 0, .1);
+                transition: 5s;
+
+                &:hover {
+                    background: linear-gradient(to right, hsl(293, 100%, 63%),
+                            hsl(264, 100%, 61%));
+                }
+
+                & .phone-header-left {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: hsl(0, 0%, 100%);
+                    gap: 10px;
+
+                    & p {
+                        font-size: 2em;
+                        cursor: pointer;
+                    }
+
+                    & .imgBox {
+                        position: relative;
+                        height: 35px;
+                        width: 35px;
+                        border-radius: 50%;
+                        border: 2px solid hsl(0, 0%, 100%);
+                        overflow: hidden;
+
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: .5s;
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+
+                    & .header-text {
+                        position: relative;
+
+
+                        & h3 {
+                            font-size: .9em;
+                            font-weight: 600;
+                        }
+
+                        & h5 {
+                            font-size: .7em;
+                            font-weight: 500;
+                            color: hsl(276, 100%, 81%);
+                        }
+                    }
+                }
+
+                & .right-menu {
+                    position: relative;
+                    width: 3px;
+                    height: 3px;
+                    border-radius: 50%;
+                    background: hsl(0, 0%, 100%);
+                    cursor: pointer;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        background: hsl(0, 0%, 100%);
+                        top: -6px;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 3px;
+                        height: 3px;
+                        border-radius: 50%;
+                        background: hsl(0, 0%, 100%);
+                        top: 6px;
+                    }
+                }
+            }
+
+            & .phone-body {
+                position: relative;
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+
+                & .phone-body-text {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    &.right {
+                        position: relative;
+                        justify-content: flex-end;
+                        margin-bottom: 10px;
+
+
+                        & p {
+                            position: relative;
+                            background: hsl(0, 0%, 100%);
+                            box-shadow: 10px 10px 30px rgba(0, 0, 0, .09);
+                            border-radius: 10px 10px 5px 10px;
+                            margin: 0 0px 0px 88px;
+                            color: hsl(271, 15%, 43%);
+
+                            &:nth-child(2) {
+                                margin: 0 0px 0px 145px;
+                                width: 40%;
+                            }
+                        }
+                    }
+
+
+                    & p {
+                        color: hsl(276, 55%, 52%);
+                        font-size: .5em;
+                        background: hsla(270, 7%, 64%, 15%);
+                        max-width: 65%;
+                        padding: 1em;
+                        border-radius: 1em;
+                    }
+                }
+
+                & .phone-body-avatar {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 10px 0;
+                    gap: 5px;
+
+                    & .imgBox {
+                        position: relative;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: .8em;
+                        overflow: hidden;
+
+                        & img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: .5s;
+
+                            &:hover {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+
+                & .phone-body-radio {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    padding-top: 10px;
+                    width: 100%;
+
+                    & label {
+                        width: 100%;
+                    }
+
+                    & .radio {
+                        position: relative;
+                        display: flex;
+                        background: linear-gradient(to right, hsl(293, 100%, 63%),
+                                hsl(264, 100%, 61%));
+                        border-radius: 15px 12px 12px 4px;
+                        height: 38px;
+                        color: hsl(0, 0%, 100%);
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 15px;
+                        width: 80%;
+
+                        & div {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            gap: 10px;
+
+                            & input {
+                                appearance: none;
+                                outline: none;
+                                width: 15px;
+                                height: 15px;
+                                border: 1px solid hsl(289, 100%, 72%);
+                                background: transparent;
+                                border-radius: 50%;
+
+                                &:checked {
+                                    background: hsl(0, 0%, 100%);
+                                }
+                            }
+
+                            & p {
+                                font-size: .7em;
+                                color: hsl(289, 100%, 85%);
+                            }
+                        }
+
+                        & h2 {
+                            font-size: .9em;
+                            font-weight: 600;
+                        }
+
+                    }
+                }
+
+                & .footer {
+                    position: relative;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 15px;
+                    background: hsl(0, 0%, 100%);
+                    border-radius: 40px;
+
+                    & input {
+                        position: relative;
+                        width: 80%;
+                        outline: none;
+                        border: none;
+                        padding: 18px 20px;
+                        border-radius: 40px;
+                        font-size: .7em;
+
+                        &::placeholder {
+                            color: hsl(206, 6%, 79%);
+                        }
+                    }
+
+                    & button {
+                        position: relative;
+                        outline: none;
+                        border: none;
+                        background: hsl(271, 36%, 24%);
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        color: hsl(0, 0%, 100%);
+                        font-size: 1.2em;
+                        @include flex(center);
+                        transform: translateX(-10px);
+                        cursor: pointer;
+                        transition: .5s;
+
+                        &:hover {
+                            background: hsl(271, 36%, 44%);
+                        }
+                    }
+                }
+            }
+        }
+
+        & .textContent {
+            position: relative;
+            width: 44%;
+            @include flex(center);
+            gap: 30px;
+
+            & h2 {
+                font-size: 2em;
+                font-weight: 600;
+                text-align: left;
+                width: 100%;
+                color: hsl(271, 36%, 24%);
+            }
+
+            & p {
+                font-size: .9em;
+                color: hsl(270, 7%, 64%);
+                line-height: 2em;
+            }
+        }
+    }
+}
+
+@media (max-width: 62.5em) {
+
+    main {
+        padding: 80px;
+
+        &::before {
+            width: 50%;
+            height: 50%;
+            left: -20px;
+        }
+
+        &::after {
+            width: 50%;
+            height: 60%;
+
+        }
+    }
+
+    main section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 80px;
+
+        & .phone {
+            width: 33%;
+        }
+
+        & .textContent {
+            position: relative;
+            text-align: center;
+            width: 70%;
+
+            & h2 {
+                text-align: center;
+                font-size: 3em;
+            }
+
+            & p {
+                font-size: 1.1em;
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 37.5em) {
+    main section .textContent p {
+        font-size: 1.1em;
+        width: 70%;
+    }
+
+    main::before {
+        width: 60%;
+        height: 50%;
+        left: -60px;
+    }
+
+    main section .textContent p {
+        width: 60%;
+    }
+}
+
+@media (max-width: 30em) {
+    main section .textContent {
+        position: relative;
+        text-align: center;
+        width: 60%;
+
+        & h2 {
+            font-size: 2.5em;
+        }
+    }
+
+    main section .phone {
+        width: 30%;
+    }
+
+    main::after {
+        width: 90%;
+        right: -30%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 24em) {
+    main section .textContent p {
+        width: 55%;
+    }
+
+    main::before {
+        width: 80%;
+        height: 50%;
+        left: -30px;
+    }
+}
