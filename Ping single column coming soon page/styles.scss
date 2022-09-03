@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+
+// Mixins
+
+@mixin flex ($i) {
+    display: flex;
+    justify-content: $i;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Colour Variables
+$blue: hsl(223, 87%, 63%);
+$paleBlue: hsl(223, 100%, 88%);
+$lightRed: hsl(354, 100%, 66%);
+$gray: hsl(0, 0%, 59%);
+$veryDarkBlue: hsl(209, 33%, 12%);
+$white: #fff;
+
+// Font Variables
+$fw-300: 300;
+$fw-600: 600;
+$fw-700: 700;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+
+main {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.125em;
+    gap: 2em;
+
+    & .top {
+        position: relative;
+        display: flex;
+        flex-flow: wrap column;
+        gap: 1.8em;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+
+        & .imgBox {
+            position: relative;
+            width: 80px;
+            height: 40px;
+
+            & img {
+                @include absolute();
+                object-fit: contain;
+            }
+        }
+
+        & .textContent {
+            display: flex;
+            flex-direction: column;
+            gap: .8em;
+
+            & p {
+                font-weight: $fw-300;
+                color: $veryDarkBlue;
+                font-size: 1.1em;
+            }
+        }
+
+        & .input {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            gap: 1.5em;
+            width: 70%;
+
+            & input {
+                border-radius: 2em;
+                outline: none;
+
+                &[type="email"] {
+                    width: 70%;
+
+                    border: 1px solid $paleBlue;
+                    padding: 1.1em 3em;
+
+                    &::placeholder {
+                        color: $paleBlue;
+                    }
+                }
+
+                &[type="submit"] {
+                    width: 30%;
+                    background: $blue;
+                    border: none;
+                    color: $white;
+                    font-weight: $fw-300;
+                    font-size: 1em;
+                    box-shadow: 7px 7px 30px rgba($blue, .1);
+                    transition: .5s;
+
+                    &:hover {
+                        background: transparent;
+                        border: 1px solid $blue;
+                        color: $blue;
+                    }
+
+                }
+            }
+
+        }
+
+        & h1 {
+            color: $gray;
+
+            font: {
+                size: 2.7em;
+                weight: $fw-300;
+            }
+
+            & span {
+                color: $veryDarkBlue;
+                font-weight: $fw-700;
+            }
+        }
+    }
+
+    & .bottom {
+        position: relative;
+        width: 100%;
+        @include flex(center);
+
+        & .imgBox {
+            position: relative;
+            width: 50%;
+            height: 26em;
+
+            & img {
+                @include absolute();
+                object-fit: contain;
+                transition: .5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    & footer {
+        position: relative;
+        display: flex;
+        flex-flow: wrap column;
+        gap: 1.5em;
+        margin: 0 0 -1em 0;
+
+        & ul {
+            position: relative;
+            display: flex;
+            gap: 1em;
+            justify-content: center;
+
+            & li {
+                list-style: none;
+                width: 2.8em;
+                height: 2.8em;
+                @include flex(center);
+                border-radius: 50%;
+                border: 1px solid $paleBlue;
+                transition: .5s;
+
+                &:hover {
+                    background: $blue;
+
+                    & i {
+                        color: $white;
+                    }
+                }
+
+                & i {
+                    color: $blue;
+                    transition: .5s;
+                }
+            }
+        }
+    }
+
+    & p {
+        color: $gray;
+        text-align: center;
+    }
+}
+
+@media (max-width: 69.75em) {
+    main .top {
+        width: 100%;
+    }
+
+    main .bottom .imgBox {
+        width: 100%;
+    }
+}
+
+@media (max-width: 59em) {
+    main .top .input {
+        width: 85%;
+    }
+}
+
+@media (max-width: 40em) {
+    main .top .input {
+        flex-direction: column;
+
+        & input[type="email"] {
+            width: 100%;
+        }
+
+        & input[type="submit"] {
+            width: 100%;
+            padding: 1.1em;
+        }
+    }
+
+    main .bottom .imgBox {
+        height: 20em;
+    }
+
+    main .top h1 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 32.25em) {
+    main .bottom .imgBox {
+        width: 120%;
+        height: 16em;
+    }
+
+    main .top .input {
+        width: 100%;
+    }
+
+    main .top h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 26.85em) {
+    main .top h1 {
+        font-size: 1.5em;
+    }
+
+    main .top .textContent p {
+        font-size: 1em;
+    }
+
+    main .top .input input[type=email],
+    main .top .input input[type=submit] {
+        padding: 1em;
+    }
+
+    main .bottom .imgBox {
+        height: 13em;
+    }
+
+    main footer {
+        padding-top: 2em;
+    }
+
+    main p {
+        font-size: .85em;
+    }
+}
+
+@media (max-width: 23.45em) {
+    main {
+        padding: 1.5em;
+
+        & .bottom .imgBox {
+            width: 100%;
+        }
+    }
+
+}
