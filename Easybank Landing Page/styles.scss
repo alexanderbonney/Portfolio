@@ -1,0 +1,735 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+// Mixins
+
+@mixin flex ($x, $y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+    flex-direction: column;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Primary Colour Variables
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+
+
+// Neutral Colour Variables
+
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// Font Variables
+$fw-300: 300;
+$fw-400: 400;
+$fw-700: 700;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+}
+
+button {
+    position: relative;
+    color: $white;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    border: none;
+    padding: 1em 2.5em;
+    border-radius: 2.3em;
+    transition: .5s;
+    cursor: pointer;
+
+    font: {
+        size: 1em;
+        weight: $fw-700;
+    }
+
+    &:hover {
+        letter-spacing: .1em;
+
+    }
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: $lightGrayishBlue;
+
+    & header {
+        position: fixed;
+        @include flex(space-between, center);
+        flex-direction: row;
+        background: $white;
+        padding: .7em 5em;
+        z-index: 330;
+        width: 100%;
+        border-bottom: 1px solid rgba($grayishBlue, .1);
+
+        & .imgBox {
+            position: relative;
+            animation: logo 2s ease-in-out alternate-reverse infinite;
+            // animation-play-state: paused;
+        }
+
+        & nav {
+            position: relative;
+
+            & ul {
+                position: relative;
+                display: flex;
+
+                & li {
+                    position: relative;
+                    list-style: none;
+                    margin: .7em;
+
+                    & a {
+                        position: relative;
+                        text-decoration: none;
+                        color: $grayishBlue;
+                        transition: .5s;
+
+                        &:hover {
+                            color: $darkBlue;
+
+                            &::before {
+                                width: 100%;
+                            }
+                        }
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 0%;
+                            height: .2em;
+                            background: linear-gradient(to right, $limeGreen, $brightCyan);
+                            bottom: -140%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            transition: .5s;
+                            border-radius: 2.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & main {
+        position: relative;
+
+
+        & section {
+            position: relative;
+            min-height: 100vh;
+
+
+            &.top {
+                position: relative;
+                display: flex;
+                padding: 0 0em 5em 5em;
+
+
+                & .textContent {
+                    position: relative;
+                    width: 50%;
+                    @include flex(center, flex-start);
+                    gap: 2em;
+                    height: 100vh;
+
+                    & h1 {
+                        color: $darkBlue;
+
+                        font: {
+                            size: 4em;
+                            weight: $fw-400;
+                        }
+                    }
+
+                    & p {
+                        color: $grayishBlue;
+                        font-size: 1.2em;
+                        line-height: 1.5em;
+                        width: 75%;
+                    }
+                }
+
+                & .phoneImage {
+                    position: relative;
+                    width: 50%;
+                    background: url(/images/bg-intro-desktop.svg);
+                    background-size: 200%;
+                    background-repeat: no-repeat;
+                    background-position: -4.6em -15em;
+                    overflow: hidden;
+
+
+                    & .imgBox {
+                        position: relative;
+                        width: 100%;
+                        height: 120vh;
+                        z-index: 1;
+
+                        & img {
+                            position: absolute;
+                            top: 0%;
+                            left: 0%;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            transform: translateY(-5%) translateX(12%) scale(1.2);
+                        }
+                    }
+                }
+            }
+
+            &.middle {
+                position: relative;
+                background: $white;
+                margin-top: -12em;
+                padding: 5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                gap: 2.5em;
+
+                & .why_text {
+                    position: relative;
+                    color: $darkBlue;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5em;
+
+                    & h3 {
+                        font: {
+                            size: 2.4em;
+                            weight: $fw-400;
+                        }
+                    }
+
+                    & p {
+                        width: 63%;
+                        line-height: 2em;
+                        color: $grayishBlue;
+                        font-size: 1.2em;
+                    }
+                }
+
+                & .cardContainer {
+                    position: relative;
+                    display: grid;
+                    gap: 2.4em;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+                    & .card,
+                    & .textContent {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5em;
+                    }
+
+                    & .card {
+                        cursor: pointer;
+
+                        &:hover .imgBox img {
+                            transform: scale(1.2);
+                        }
+
+                        &:hover .textContent {
+                            & h3 {
+                                color: $limeGreen;
+                            }
+
+                            & p {
+                                color: $darkBlue;
+                            }
+                        }
+
+                        .imgBox {
+                            position: relative;
+                            width: 4.5em;
+                            height: 4.5em;
+                            overflow: hidden;
+                            border-radius: 50%;
+
+                            & img {
+                                @include absolute();
+                                object-fit: contain;
+                                transition: .5s;
+
+                            }
+                        }
+                    }
+
+                    & .textContent {
+                        & h3 {
+                            color: $darkBlue;
+                            transition: .5s;
+
+                            font: {
+                                size: 1.5em;
+                                weight: $fw-400;
+                            }
+                        }
+
+                        & p {
+                            color: $grayishBlue;
+                            line-height: 1.5em;
+                            transition: .5s;
+                        }
+                    }
+                }
+            }
+
+            &.bottom {
+                position: relative;
+                padding: 5em;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                min-height: 110vh;
+                gap: 3em;
+
+                & h2 {
+                    color: $darkBlue;
+                    font-size: 2.4em;
+                    font-weight: $fw-400;
+                }
+
+                & .boxContainer {
+                    position: relative;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                    gap: 2em;
+
+                    & .box {
+                        position: relative;
+                        background: $white;
+                        border-radius: .3em;
+                        overflow: hidden;
+                        height: 28em;
+                        cursor: pointer;
+
+                        &:hover .imgBox img {
+                            transform: scale(1.2);
+                        }
+
+                        &:hover .textContent {
+                            & h3 {
+                                color: $limeGreen;
+                            }
+
+                            & p {
+                                color: $darkBlue;
+                            }
+                        }
+
+                        & .imgBox {
+                            position: relative;
+                            width: 100%;
+                            height: 50%;
+                            overflow: hidden;
+
+                            & img {
+                                @include absolute();
+                                object-fit: cover;
+                                transition: .5s;
+                            }
+                        }
+
+                        & .textContent {
+                            padding: 1.4em;
+                            height: 50%;
+                            @include flex(space-evenly, flex-start);
+                            gap: .6em;
+
+                            & small {
+                                color: $grayishBlue;
+
+                                font: {
+                                    size: .8em;
+                                }
+                            }
+
+                            & h3 {
+                                color: $darkBlue;
+                                transition: .5s;
+
+                                font: {
+                                    size: 1.3em;
+                                    weight: $fw-400;
+                                }
+                            }
+
+                            & p {
+                                color: $grayishBlue;
+                                font-size: .9em;
+                                line-height: 1.3em;
+                                transition: .5s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & footer {
+        position: relative;
+        background: $darkBlue;
+        padding: 5em 5em 2em;
+        min-height: 30%;
+        @include flex(space-between, center);
+        flex-direction: row;
+
+        & .left {
+            position: relative;
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
+            gap: 1em;
+
+            & .footer-logo {
+                position: relative;
+                display: grid;
+                gap: 2.2em;
+                padding-top: .8em;
+
+                & ul {
+                    position: relative;
+                    display: flex;
+
+                    & li {
+                        position: relative;
+                        list-style: none;
+                        margin: .5em;
+                        @include flex(center, center);
+
+                        & a img {
+                            transition: .3s;
+
+                            &:hover {
+                                filter: brightness(0) saturate(100%) invert(68%) sepia(89%) saturate(415%) hue-rotate(76deg) brightness(87%) contrast(90%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            & ul {
+                position: relative;
+
+                & li {
+                    position: relative;
+                    list-style: none;
+                    margin: 1em;
+
+                    & a {
+                        position: relative;
+                        display: block;
+                        text-decoration: none;
+                        color: $white;
+                        transition: .5s;
+
+                        &:hover {
+                            color: $limeGreen;
+                        }
+                    }
+                }
+            }
+        }
+
+        & .right {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+
+            & p {
+                color: $grayishBlue;
+            }
+        }
+    }
+}
+
+@keyframes logo {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 62.375em) {
+    body main section.top .textContent h1 {
+        margin-top: -1.5em;
+        font-size: 3.5em;
+    }
+
+    body main section.middle {
+        padding: 2em;
+
+        & .cardContainer {
+            gap: 4.4em 2em;
+        }
+    }
+
+
+}
+
+@media (max-width: 64.375em) {
+
+    body main section.bottom {
+        padding: 3em 2em;
+    }
+
+    body footer {
+        padding: 3em 2em 2em;
+
+        & .left {
+            width: 70%;
+        }
+
+        & .right p {
+            text-align: center;
+        }
+    }
+
+    body header {
+        padding: .7em 2em;
+    }
+
+    body main section.top {
+        flex-direction: column-reverse;
+        padding: 0 0em 2em 0em;
+        overflow: hidden;
+
+        & .textContent {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            padding-right: 2em;
+        }
+
+        & .phoneImage {
+            width: 100%;
+            // background-position: -11em -14em;
+            background-position: 0em -8em;
+            background-size: 150%;
+            overflow: visible;
+
+
+            & .imgBox {
+                height: 100vh;
+
+                & img {
+                    width: 95%;
+                    left: -20%;
+                    transform: translateY(-5%) translateX(24%) scale(1.5);
+                }
+            }
+        }
+    }
+
+    body main section.middle {
+        & .card {
+            text-align: center;
+
+            & .imgBox {
+                margin: auto;
+            }
+        }
+
+        & .why_text {
+            text-align: center;
+
+            & p {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 52em) {
+    body footer .left {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3em;
+    }
+
+    body footer .right {
+        @include flex(flex-start, center);
+        height: 18em;
+    }
+
+    header button {
+        display: none;
+    }
+}
+
+@media (max-width: 42.20em) {
+
+    body main section.top .textContent {
+        & p {
+            width: 95%;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+    }
+
+    body footer {
+        flex-direction: column;
+        gap: 1em;
+
+        & .left {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1em;
+            text-align: center;
+
+            & .footer-logo {
+                place-content: center;
+                place-items: center;
+            }
+
+            & ul li {
+                margin: 2em;
+            }
+        }
+
+        & .right {
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 37.5em) {
+    body header nav {
+        display: block;
+        position: absolute;
+        top: -100%;
+        padding: 2em;
+        border-radius: .5em;
+        background: $white;
+        left: 50%;
+        width: 50%;
+        transform: translateY(-100%) translateX(-50%);
+        transition: .5s;
+        z-index: 0;
+
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+
+            & li {
+                text-align: center;
+
+                & a {
+                    display: block;
+                }
+            }
+        }
+
+    }
+
+    body header .toggle {
+        position: relative;
+        width: 3.125em;
+        height: 3.125em;
+        background: url(/images/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-size: 2.5em;
+        background-position: center;
+        cursor: pointer;
+        transition: .5s;
+        z-index: 8;
+
+
+
+        &:hover {
+            filter: brightness(0) saturate(100%) invert(68%) sepia(89%) saturate(415%) hue-rotate(76deg) brightness(87%) contrast(90%);
+        }
+
+        &.active {
+            background: url(/images/icon-close.svg);
+            background-repeat: no-repeat;
+            background-size: 1.75em;
+            background-position: center;
+            transition: .5s;
+ 
+            &~nav {
+                display: block;
+                position: absolute;
+                top: 610%;
+                padding: 2em;
+                border-radius: .5em;
+                background: $white;
+                left: 50%;
+                width: 50%;
+                transform: translateY(-100%) translateX(-50%);
+                transition: .5s;
+                box-shadow: 1em -13em 11em 14em rgb(0 0 0 / 62%);
+
+
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    & li {
+                        text-align: center;
+
+                        & a {
+                            display: inline-block;
+
+                            &::before {
+                                bottom: -15%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 26.875em) {
+    body main section.top .textContent {
+        min-height: 80vh;
+
+        & h1 {
+            margin-top: -5em;
+            font-size: 2.5em;
+        }
+    }
+
+    body main section.top .phoneImage .imgBox img {
+        left: 0%;
+    }
+
+    body main section.top .textContent {
+        padding-right: 0em;
+    }
+
+    body header .toggle.active ~ nav {
+        width: 70%;
+    }
+}
