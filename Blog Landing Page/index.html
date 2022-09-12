@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor| Blog Landing Page</title>
+
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <section class="top">
+            <header>
+
+                <div class="nav-left">
+                    <div class="imgBox">
+                        <img src="images/logo.svg" alt="Logo">
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li class="achor" onclick="toggle()"><a href="#">Product <img
+                                        src="images/icon-arrow-dark.svg"></a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="#">Overview</a></li>
+                                        <li><a href="#">Pricing</a></li>
+                                        <li><a href="#">Marketplace</a></li>
+                                        <li><a href="#">Features</a></li>
+                                        <li><a href="#">Integrations</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="achor" onclick="toggle()"><a href="#">Company <img
+                                        src="images/icon-arrow-dark.svg"></a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Team</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Careers</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="achor" onclick="toggle()"><a href="#">Contact <img
+                                        src="images/icon-arrow-dark.svg"></a>
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="#">Newsletter</a></li>
+                                        <li><a href="#">LinkedIn</a></li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="toggle"></div>
+
+                <div class="buttons">
+                    <a href="#" type="button" class="ft-cl">Login</a>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </header>
+
+            <div class="header_text">
+                <h1>A modern publishing platform</h1>
+                <p class="ft-cl">Grow your audience and build your online brand</p>
+                <div class="buttons">
+                    <button type="submit">Start for Free</button>
+                    <a href="#" type="button" class="ft-cl">Login</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+            <h2>Designed for the future</h2>
+
+            <div class="contentBox">
+                <div class="content_left">
+                    <div>
+                        <h3>Introducing an extensible editor</h3>
+                        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating
+                            content. The editor supports management of multiple blogs and allows easy manipulation of
+                            embeds
+                            such as images, videos, and Markdown. Extensibility with plugins and themes provide easy
+                            ways to
+                            add
+                            functionality or change the looks of a blog.</p>
+                    </div>
+
+                    <div>
+                        <h3>Robust content management</h3>
+                        <p>Flexible content management enables users to easily move through posts. Increase the
+                            usability of
+                            your blog by adding customized categories, sections, format, or flow. With this
+                            functionality,
+                            you’re in full control.</p>
+                    </div>
+                </div>
+
+                <div class="content_right">
+                    <div class="imgBox">
+                        <img src="images/illustration-editor-desktop.svg" alt="Editor Illustration">
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentBox-phone">
+                <div class="imgBox">
+                    <img src="images/illustration-phones.svg" alt="">
+                </div>
+                <div class="textContent">
+                    <h3>State of the Art Infrastructure</h3>
+                    <p>
+                        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
+                        connectivity. This ensures your site will load instantly, no matter where your readers are,
+                        keeping your site competitive.</p>
+                </div>
+            </div>
+
+            <div class="contentBox flex-content">
+                <div class="content_right">
+                    <div class="imgBox image-left">
+                        <img src="images/illustration-laptop-desktop.svg" alt="Editor Illustration">
+                    </div>
+                </div>
+
+                <div class="content_left">
+                    <div>
+                        <h3>Free, open, simple
+                        </h3>
+                        <p class="cnt2">Blogr is a free and open source application backed by a large community of
+                            helpful developers. It supports features such as code syntax highlighting, RSS feeds, social
+                            media integration, third-party commenting tools, and works seamlessly with Google Analytics.
+                            The architecture is clean and is relatively easy to learn.</p>
+                    </div>
+
+                    <div>
+                        <h3>Powerful tooling</h3>
+                        <p class="cnt2">Batteries included. We built a simple and straightforward CLI tool that makes
+                            customization and deployment a breeze, but capable of producing even the most complicated
+                            sites.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="imgBox">
+                <img src="images/logo.svg" alt="Logo">
+            </div>
+
+            <ul class="prdt_links">
+                <li><a href="#"><b>Product</b></a></li>
+                <br>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Marketplace</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Integrations</a></li>
+            </ul>
+
+            <ul class="company_links">
+                <li><a href="#"><b>Company</b></a></li>
+                <br>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Integrations</a></li>
+            </ul>
+
+            <ul class="connect_links">
+                <li><a href="#"><b>Connect</b></a></li>
+                <br>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+<script>
+    var toggle = document.querySelector('main section.top header .toggle');
+    var nav = document.querySelector('main section.top header .nav-left nav ul');
+    var sectionTop = document.querySelector('main section.top');
+    var head_textContent = document.querySelector('main section.top .header_text');
+
+    toggle.onclick = function(){
+        this.classList.toggle('active');
+        nav.classList.toggle('active');
+        sectionTop.classList.toggle('active');
+        head_textContent.classList.toggle('active');
+    }
+
+ 
+
+</script>
+
+</html>
