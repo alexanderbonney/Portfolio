@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor| Project Tracking Intro Component</title>
+
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="imgBox">
+            <img src="images/logo.svg" alt="">
+        </div>
+
+        <div class="nav-toggle"></div>
+
+        <ul>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#"><span>&#8226;</span></a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="left">
+            <div class="textContainer">
+                <div class="title">
+                    <p><span>&nbsp;New</span>Monograph Dashboard</p>
+                </div>
+                <h1>Powerful insights into your team</h1>
+                <p class="text">Project planning and time tracking for agile teams</p>
+                <div class="CTAs">
+                    <button type="submit">Schedule a Demo</button>
+                    <button type="submit">To see a preview</button>
+                </div>
+            </div>
+        </section>
+        <section class="right">
+            <div class="imgBox">
+                <img src="images/illustration-devices.svg" alt="Illustration Device">
+            </div>
+        </section>
+    </main>
+</body>
+
+<script>
+    var toggle = document.querySelector('.nav-toggle');
+
+    toggle.onclick = function () {
+        this.classList.toggle('active');
+    }
+</script>
+
+</html>
