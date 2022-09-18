@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor| Article Preview Component</title>
+
+    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="32x32">
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section>
+        <figure class="drawers">
+            <img src="images/drawers.jpg" alt="">
+        </figure>
+
+        <div class="textContent">
+            <h2>Shift the overall look and feel by adding these wonderful touches to furniture in your home</h2>
+            <p>Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting.
+                I’ve got some simple tips to help you make any room feel complete.</p>
+
+            <div class="footer">
+                <div class="footer-details">
+                    <figure class="avatar">
+                        <img src="images/avatar-michelle.jpg" alt="Michelle">
+                    </figure>
+                    <div class="avatar-details">
+                        <h5>Michelle Appleton</h5>
+                        <p>28 Jun 2020</p>
+                    </div>
+                </div>
+                <ul class="social-media">
+                    <li><a href="#"> SHARE </a></li>
+                    <li><a href="https://web.facebook.com/?_rdc=1&_rdr"> <img src="/images/icon-facebook.svg"
+                                alt="Facebook"></a></li>
+                    <li><a href="https://twitter.com/home"> <img src="images/icon-twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="https://www.pinterest.com/"> <img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+                    </li>
+                </ul>
+
+                <div class="share"><i class="fa-sharp fa-solid fa-share"></i></div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var share = document.querySelector('.share');
+        var socialMedia = document.querySelector('.social-media');
+
+        share.onclick = function () {
+            this.classList.toggle('active');
+            socialMedia.classList.toggle('active');
+        }
+    </script>
+</body>
+
+<script>
+
+</script>
+
+</html>
