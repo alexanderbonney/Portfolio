@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+// Mixins
+
+@mixin flex ($x, $y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Colour Variables
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 0%);
+$DarkGray: hsl(0, 0%, 55%);
+$VeryDarkGray: hsl(0, 0%, 41%);
+
+// Font Variables
+$fw-300: 300;
+$fw-400: 400;
+
+// Class Variables
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+header,
+footer {
+    position: relative;
+    padding: 3em 6em;
+    @include flex(space-between, center);
+    color: $White;
+
+    & figure {
+        position: relative;
+        width: 200px;
+        height: 40px;
+        z-index: 10;
+
+        & img {
+            @include absolute();
+            object-fit: contain;
+            transition: .5s;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-.5em);
+            }
+        }
+    }
+
+    & nav {
+        position: relative;
+
+        & ul {
+            position: relative;
+            display: flex;
+            gap: 1.5em;
+
+            & li {
+                position: relative;
+                list-style: none;
+
+                & a {
+                    position: relative;
+                    text-decoration: none;
+                    color: $White;
+
+                    &:hover::before {
+                        width: 100%;
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 0%;
+                        height: 2px;
+                        bottom: -10%;
+                        left: 0%;
+                        background: $White;
+                        transition: .5s;
+                    }
+
+                    font: {
+                        size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+main {
+    position: relative;
+    background: $White;
+}
+
+.jumbo-header {
+    position: relative;
+    min-height: 90vh;
+    background: url(/images/desktop/image-hero.jpg);
+    background-size: cover;
+    animation: bgImg 5s ease-in-out infinite alternate-reverse;
+    animation-play-state: paused;
+
+    &:hover {
+        animation-play-state: running;
+    }
+
+    @keyframes bgImg {
+        from {
+            background-size: 100%;
+        }
+
+        to {
+            background-size: 120%;
+        }
+    }
+
+    & .border-card {
+        position: relative;
+        padding: 2em;
+        border: .15em solid $White;
+        margin: 3em 6em;
+        width: 35%;
+        transition: .5s;
+
+        &:hover {
+            backdrop-filter: blur(20px);
+        }
+
+        & h1 {
+            color: $White;
+
+            font: {
+                size: 4em;
+                weight: $fw-300;
+            }
+        }
+    }
+}
+
+.top-section {
+    position: relative;
+    padding: 6em;
+    min-height: 100vh;
+
+    & .imgBox {
+        position: relative;
+        width: 60%;
+        height: 500px;
+        overflow: hidden;
+
+        & img {
+            @include absolute();
+            object-fit: cover;
+            transition: .5s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    & .textCard {
+        position: absolute;
+        padding: 4em;
+        width: 35%;
+        top: 36%;
+        right: 10%;
+        background: $White;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        transition: .5s;
+
+        & h2 {
+            font: {
+                size: 2.5em;
+                weight: $fw-300;
+            }
+        }
+
+        & p {
+            line-height: 1.5em;
+        }
+
+        &:hover {
+            background: $Black;
+            color: $White;
+        }
+    }
+}
+
+.bottom-section {
+    position: relative;
+    padding: 0 6em;
+    min-height: 170vh;
+
+    & .bttm {
+        position: relative;
+        @include flex(space-between, center);
+        padding-bottom: 3em;
+
+        & h3 {
+            font: {
+                size: 2.4em;
+                weight: $fw-300;
+            }
+        }
+
+        & button {
+            border: 2px solid $Black;
+            background: transparent;
+            text-transform: uppercase;
+            padding: 1em 2em;
+            letter-spacing: .5em;
+            transition: .5s;
+            cursor: pointer;
+
+            font: {
+                size: 1em;
+                weight: 600;
+            }
+
+            &:hover {
+                background: $Black;
+                color: $White;
+            }
+        }
+    }
+
+    & .card-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+        grid-row-gap: 2em;
+        grid-column-gap: 1em;
+
+        & .card {
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                .text {
+                    color: $Black;
+                }
+
+                & .imgBox img {
+                    opacity: .5;
+                    transform: scale(1.2);
+                }
+            }
+
+            & .imgBox {
+                position: relative;
+                width: 275px;
+                height: 400px;
+
+
+                & img {
+                    @include absolute();
+                    transition: .5s;
+                }
+            }
+
+            & .text {
+                position: absolute;
+                color: $White;
+                z-index: 1;
+                bottom: 0;
+                padding: 2em;
+
+                & h1 {
+                    width: 70%;
+
+                    font: {
+                        weight: $fw-300;
+                        size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    position: relative;
+    background: $Black;
+    padding: 2em 6em;
+
+    & .rightContainer nav ul li a i {
+        font-size: 1.5em;
+        transition: .5s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+@media (max-width: 69.75em) {
+
+    header {
+        padding: 3em;
+    }
+
+    .jumbo-header {
+        background-size: cover;
+        overflow: hidden;
+
+        & .border-card {
+            width: 44ch;
+            margin: 3em;
+
+            & h1 {
+                font-size: 3.5em;
+            }
+        }
+    }
+
+    .bottom-section .card-section {
+        margin-bottom: 5em;
+    }
+
+    .top-section,
+    .bottom-section,
+    footer {
+        padding: 3em;
+    }
+}
+
+@media (max-width: 61.93em) {
+    header {
+        padding: 3em;
+        width: 90%;
+        position: fixed;
+        z-index: 10;
+
+        & nav {
+            display: none;
+        }
+    }
+
+    .jumbo-header {
+        background-image: url(/images/mobile/image-hero.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & .border-card {
+            width: 83%;
+            margin: 200px auto;
+
+            & h1 {
+                width: 12ch;
+            }
+        }
+    }
+
+    .nav-toggle {
+        position: relative;
+        width: 3.125em;
+        height: 3.125em;
+        background: url(/images/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 1.875em;
+        cursor: pointer;
+        transition: .5s;
+        z-index: 10;
+
+        &:hover {
+            transform: scale(1.1)
+        }
+
+        &.sticky {
+            filter: invert(1);
+        }
+
+        &.active {
+            background: url(/images/icon-close.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1.5625em;
+
+            &.sticky {
+                filter: invert(0);
+            }
+
+            &~.logo.sticky img {
+                filter: invert(0);
+            }
+
+            &~nav {
+                position: absolute;
+                display: block;
+                background: $Black;
+                width: 100%;
+                min-height: 100vh;
+                top: 0;
+                right: 0;
+                z-index: 1;
+
+                & ul {
+                    flex-direction: column;
+                    top: 12em;
+                    left: 3em;
+
+                    & li a {
+                        font-size: 2em;
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo.sticky img {
+        filter: invert(1);
+    }
+
+    .top-section {
+        & .textCard {
+            position: relative;
+            width: auto;
+            top: 0;
+            right: 0;
+            text-align: center;
+            padding: 2em;
+
+            & p {
+                font-size: 1.2em;
+                line-height: 2em;
+            }
+        }
+
+        & .imgBox {
+            width: 100%;
+        }
+    }
+
+    .bottom-section {
+        & .bttm {
+            button {
+                position: absolute;
+                top: 144em;
+                transform: translateX(50%);
+                right: 50%;
+                font-size: 1.2em;
+            }
+
+            & h3 {
+                font-size: 3.5em;
+                font-weight: 300;
+                margin: auto;
+            }
+        }
+
+        & .card-section {
+            grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+
+            & .card .imgBox {
+                height: 300px;
+                width: 100%;
+
+                & img {
+                    object-fit: cover;
+                    // object-position: 0 -65px;
+                }
+            }
+        }
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 4em;
+
+        & nav ul {
+            flex-direction: column;
+            gap: 2.5em;
+
+            &.socialMedia {
+                flex-direction: row;
+                gap: 0em;
+            }
+
+            & li {
+                margin: auto;
+            }
+        }
+    }
+
+    .footer-text {
+        font-size: 1.2em;
+        color: rgb(162, 160, 167);
+        text-align: center;
+    }
+}
+
+@media (max-width: 36.25em) {
+
+    .jumbo-header .border-card h1 {
+        font-size: 3em;
+    }
+
+    .bottom-section .card-section .card .imgBox {
+        height: 200px;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .bottom-section .bttm {
+        & h3 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        & button {
+            top: 100.5em;
+            width: 22ch;
+        }
+    }
+
+    .top-section,
+    .bottom-section,
+    footer {
+        padding: 1em;
+    }
+
+    .top-section .imgBox {
+        width: 90%;
+        margin: auto;
+        height: 350px;
+    }
+}
+
+@media (max-width: 30em) {
+    header {
+        padding: 1em;
+    }
+
+    .jumbo-header .border-card {
+        width: 75%;
+
+        & h1 {
+            font-size: 2.5em;
+            line-height: 1.5em;
+        }
+    }
+
+    .top-section .textCard {
+        width: 82%;
+        padding: 1em;
+        margin: auto;
+        gap: 1em;
+
+        & h2 {
+            font-size: 2em;
+        }
+    }
+
+    .bottom-section .bttm h3 {
+        font-size: 2em;
+    }
+
+    .bottom-section .card-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bottom-section .card-section .card .text {
+        padding: 1em;
+
+        & h1 {
+            font-size: 1.5em;
+        }
+    }
+}
+
+@media (max-width: 22.5em) {
+    .bottom-section .card-section .card .imgBox {
+        height: 150px;
+    }
+
+    .top-section .textCard {
+        & p {
+            font-size: 1.1em;
+            line-height: 1.7em;
+        }
+
+        & h2 {
+            font-size: 1.7em;
+        }
+    }
+
+    .jumbo-header {
+        &:hover {
+            animation-play-state: paused;
+        }
+
+        & .border-card {
+            width: 70%;
+
+            & h1 {
+                font-size: 1.8em;
+                width: auto;
+            }
+        }
+    }
+
+    header figure img {
+        left: -15%;
+        transform: scale(.8);
+    }
+
+}
