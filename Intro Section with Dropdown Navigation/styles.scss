@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+// Mixins
+
+@mixin flex ($x, $y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Colour Variables
+$almostWhite: hsl(0, 0%, 98%);
+$mediumGray: hsl(0, 0%, 41%);
+$almostBlack: hsl(0, 0%, 8%);
+$White: #fff;
+
+// Font Variables
+$fw-500: 500;
+$fw-700: 700;
+
+// Class Variables
+.button {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: $mediumGray;
+    font-size: 1em;
+    transition: .5s;
+    cursor: pointer;
+
+    &:hover {
+        color: $almostBlack;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    background: $almostWhite;
+}
+
+header {
+    position: relative;
+    @include flex(space-between, center);
+    padding: 2em;
+
+    & .logo {
+        position: relative;
+        width: 100px;
+        height: 40px;
+
+        & img {
+            @include absolute();
+            object-fit: contain;
+            transition: .5s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    & nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-grow: .9;
+
+        & ul {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            // gap: 1em;
+
+            & li {
+                position: relative;
+                margin: auto 1em;
+                list-style: none;
+                padding: 1em 0;
+
+                &:hover a {
+                    color: $almostBlack;
+
+                    &~.dropdown-menu {
+                        display: block;
+
+                        & ul li a {
+                            color: $mediumGray;
+
+                            &:hover {
+                                color: $almostBlack;
+                            }
+                        }
+                    }
+                }
+
+                & a {
+                    position: relative;
+                    display: flex;
+                    text-decoration: none;
+                    color: $mediumGray;
+                    transition: .5s;
+
+                    &:focus~.dropdown-menu {
+                        display: block;
+                    }
+
+                    font: {
+                        size: 1em;
+                        weight: $fw-500;
+                    }
+
+                    & img {
+                        transition: .5s;
+                        margin-left: .4em;
+                        width: 10px;
+                        height: 15px;
+                        object-fit: contain;
+                    }
+
+                    &:hover img {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                & .dropdown-menu {
+                    position: absolute;
+                    top: 50px;
+                    left: -20px;
+                    display: none;
+                    background: $White;
+                    box-shadow: 10px 10px 30px rgba(0, 0, 0, .1);
+                    border-radius: .4em;
+                    padding: 2em 1.3em;
+                    width: 8em;
+                    z-index: 1;
+
+                    & ul {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        left: -5px;
+
+                        & li {
+                            margin: .5em;
+
+                            & a {
+                                position: relative;
+                                text-align: center;
+                                display: flex;
+                                gap: .8em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        & .nav-buttons {
+            position: relative;
+            @include flex(space-around, center);
+            gap: 2em;
+
+            & button {
+                border: 1px solid $mediumGray;
+                border-radius: 14px;
+                padding: .7em 1.2em;
+                transition: .5s;
+
+                &:hover {
+                    border: 1px solid $almostBlack;
+                }
+            }
+        }
+    }
+}
+
+main {
+    position: relative;
+    padding: 3em 5em;
+    @include flex(space-between, center);
+    height: 600px;
+    gap: 4em;
+
+    & .left {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        & h1 {
+            font-size: 5.35em;
+        }
+
+        & p {
+            font-size: 1.15em;
+            line-height: 1.8em;
+            color: $mediumGray;
+            width: 41ch;
+        }
+
+        & button {
+            position: relative;
+            width: 14ch;
+            background-color: $almostBlack;
+            color: $White;
+            padding: .9em;
+            font-size: 1.1em;
+            font-weight: $fw-700;
+            border-radius: .5em;
+            cursor: pointer;
+            transition: .5s;
+
+            &:hover {
+                background: transparent;
+                color: $almostBlack;
+            }
+        }
+
+        & .imgBox {
+            position: relative;
+            @include flex(space-between, center);
+            padding-top: 3em;
+
+            & img {
+                transition: .5s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    & .right {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+
+        & .right-imgBox {
+            position: relative;
+            height: 100%;
+            background: url(/images/image-hero-desktop.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: .5s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+@media (max-width: 61.93em) {
+
+    main {
+        padding: 2em;
+        flex-direction: column-reverse;
+        height: 200vh;
+
+        & .left {
+            width: 100%;
+
+            & h1 {
+                text-align: center;
+            }
+
+            & p {
+                text-align: center;
+                margin: 0 auto;
+                font-size: 1.5em;
+            }
+
+            & button {
+                width: 16ch;
+                padding: 1em;
+                font-size: 1.2em;
+                margin: 0 auto;
+            }
+
+            & .imgBox {
+                padding-top: 2em;
+
+                & img {
+                    width: 130px;
+                }
+            }
+        }
+
+        & .right {
+            width: 100%;
+        }
+    }
+
+    header {
+        & nav {
+            display: none;
+        }
+
+        & .nav-toggle {
+            position: fixed;
+            width: 1.875em;
+            height: 1.875em;
+            background: url(/images/icon-menu.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            z-index: 2;
+            right: 5%;
+
+            &.active {
+                background: url(/images/icon-close-menu.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &~nav {
+                    @include absolute();
+                    height: 230vh;
+                    background: rgba($mediumGray, .2);
+                    display: block;
+                    z-index: 1;
+
+                    & ul {
+                        position: fixed;
+                        background: $White;
+                        width: 60%;
+                        height: 100%;
+                        top: 0;
+                        right: 0;
+                        z-index: 2;
+                        gap: 0;
+                        display: block;
+                        padding: 5em 0 0 3em;
+
+                        & li {
+                            margin: 3em;
+                            padding: 0;
+
+                            &:hover a~.dropdown-menu {
+                                display: none;
+                            }
+
+                            & a:focus ~ .dropdown-menu {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    & .nav-buttons {
+                        position: fixed;
+                        flex-direction: column;
+                        top: 65%;
+                        left: 45%;
+                        z-index: 2;
+                        width: 50%;
+
+                        & button {
+                            width: 100%;
+                            padding: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 45em) {
+    main .left {
+        & h1 {
+            font-size: 4em;
+        }
+
+        & p {
+            width: 90%;
+        }
+
+        & .imgBox {
+            gap: 2em;
+        }
+    }
+}
+
+@media (max-width: 40em) {
+    main {
+        height: 150vh;
+
+        & .left {
+            & h1 {
+                font-size: 3em;
+            }
+
+            & p {
+                font-size: 1.2em;
+                width: 100%;
+            }
+
+            & .imgBox img {
+                width: 20%;
+            }
+        }
+    }
+}
+
+@media (max-width: 30em) {
+
+    header .nav-toggle.active~nav {
+        height: 170vh;
+
+        & ul li {
+            margin-left: 0;
+        }
+    }
+
+    main {
+        height: 150vh;
+        padding: 1em;
+
+        & .left {
+            & h1 {
+                font-size: 2.2em;
+            }
+
+            & p,
+            button {
+                font-size: 1em;
+            }
+
+            & .imgBox {
+                gap: 0em;
+            }
+        }
+    }
+}

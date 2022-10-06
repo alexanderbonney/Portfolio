@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+.button {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: hsl(0deg, 0%, 41%);
+  font-size: 1em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Epilogue", sans-serif;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: hsl(0deg, 0%, 98%);
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+}
+header .logo {
+  position: relative;
+  width: 100px;
+  height: 40px;
+}
+header .logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .logo img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+header nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 0.9;
+      -ms-flex-positive: 0.9;
+          flex-grow: 0.9;
+}
+header nav ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header nav ul li {
+  position: relative;
+  margin: auto 1em;
+  list-style: none;
+  padding: 1em 0;
+}
+header nav ul li:hover a {
+  color: hsl(0deg, 0%, 8%);
+}
+header nav ul li:hover a ~ .dropdown-menu {
+  display: block;
+}
+header nav ul li:hover a ~ .dropdown-menu ul li a {
+  color: hsl(0deg, 0%, 41%);
+}
+header nav ul li:hover a ~ .dropdown-menu ul li a:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+header nav ul li a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 41%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 1em;
+  font-weight: 500;
+}
+header nav ul li a:focus ~ .dropdown-menu {
+  display: block;
+}
+header nav ul li a img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin-left: 0.4em;
+  width: 10px;
+  height: 15px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+header nav ul li a:hover img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+header nav ul li .dropdown-menu {
+  position: absolute;
+  top: 50px;
+  left: -20px;
+  display: none;
+  background: #fff;
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.4em;
+  padding: 2em 1.3em;
+  width: 8em;
+  z-index: 1;
+}
+header nav ul li .dropdown-menu ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: -5px;
+}
+header nav ul li .dropdown-menu ul li {
+  margin: 0.5em;
+}
+header nav ul li .dropdown-menu ul li a {
+  position: relative;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.8em;
+}
+header nav .nav-buttons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+header nav .nav-buttons button {
+  border: 1px solid hsl(0deg, 0%, 41%);
+  border-radius: 14px;
+  padding: 0.7em 1.2em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header nav .nav-buttons button:hover {
+  border: 1px solid hsl(0deg, 0%, 8%);
+}
+
+main {
+  position: relative;
+  padding: 3em 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 600px;
+  gap: 4em;
+}
+main .left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .left h1 {
+  font-size: 5.35em;
+}
+main .left p {
+  font-size: 1.15em;
+  line-height: 1.8em;
+  color: hsl(0deg, 0%, 41%);
+  width: 41ch;
+}
+main .left button {
+  position: relative;
+  width: 14ch;
+  background-color: hsl(0deg, 0%, 8%);
+  color: #fff;
+  padding: 0.9em;
+  font-size: 1.1em;
+  font-weight: 700;
+  border-radius: 0.5em;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .left button:hover {
+  background: transparent;
+  color: hsl(0deg, 0%, 8%);
+}
+main .left .imgBox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3em;
+}
+main .left .imgBox img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .left .imgBox img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+main .right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+main .right .right-imgBox {
+  position: relative;
+  height: 100%;
+  background: url(/images/image-hero-desktop.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .right .right-imgBox:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media (max-width: 61.93em) {
+  main {
+    padding: 2em;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: 200vh;
+  }
+  main .left {
+    width: 100%;
+  }
+  main .left h1 {
+    text-align: center;
+  }
+  main .left p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.5em;
+  }
+  main .left button {
+    width: 16ch;
+    padding: 1em;
+    font-size: 1.2em;
+    margin: 0 auto;
+  }
+  main .left .imgBox {
+    padding-top: 2em;
+  }
+  main .left .imgBox img {
+    width: 130px;
+  }
+  main .right {
+    width: 100%;
+  }
+  header nav {
+    display: none;
+  }
+  header .nav-toggle {
+    position: fixed;
+    width: 1.875em;
+    height: 1.875em;
+    background: url(/images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    z-index: 2;
+    right: 5%;
+  }
+  header .nav-toggle.active {
+    background: url(/images/icon-close-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  header .nav-toggle.active ~ nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 230vh;
+    background: rgba(105, 105, 105, 0.2);
+    display: block;
+    z-index: 1;
+  }
+  header .nav-toggle.active ~ nav ul {
+    position: fixed;
+    background: #fff;
+    width: 60%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    gap: 0;
+    display: block;
+    padding: 5em 0 0 3em;
+  }
+  header .nav-toggle.active ~ nav ul li {
+    margin: 3em;
+    padding: 0;
+  }
+  header .nav-toggle.active ~ nav ul li:hover a ~ .dropdown-menu {
+    display: none;
+  }
+  header .nav-toggle.active ~ nav ul li a:focus ~ .dropdown-menu {
+    display: none;
+  }
+  header .nav-toggle.active ~ nav .nav-buttons {
+    position: fixed;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 65%;
+    left: 45%;
+    z-index: 2;
+    width: 50%;
+  }
+  header .nav-toggle.active ~ nav .nav-buttons button {
+    width: 100%;
+    padding: 1.2em;
+  }
+}
+@media (max-width: 45em) {
+  main .left h1 {
+    font-size: 4em;
+  }
+  main .left p {
+    width: 90%;
+  }
+  main .left .imgBox {
+    gap: 2em;
+  }
+}
+@media (max-width: 40em) {
+  main {
+    height: 150vh;
+  }
+  main .left h1 {
+    font-size: 3em;
+  }
+  main .left p {
+    font-size: 1.2em;
+    width: 100%;
+  }
+  main .left .imgBox img {
+    width: 20%;
+  }
+}
+@media (max-width: 30em) {
+  header .nav-toggle.active ~ nav {
+    height: 170vh;
+  }
+  header .nav-toggle.active ~ nav ul li {
+    margin-left: 0;
+  }
+  main {
+    height: 150vh;
+    padding: 1em;
+  }
+  main .left h1 {
+    font-size: 2.2em;
+  }
+  main .left p,
+main .left button {
+    font-size: 1em;
+  }
+  main .left .imgBox {
+    gap: 0em;
+  }
+}
