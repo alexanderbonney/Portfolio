@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,800;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+// Mixins
+
+@mixin flex ($x, $y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Primary Colour Variables
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+
+// Neutral Colour Variables
+$White: hsl(0, 0%, 100%);
+$VeryLightGrayishBlue: hsl(210, 64%, 98%);
+$LightGrayishBlue1: hsl(211, 68%, 94%);
+$LightGrayishBlue2: hsl(205, 33%, 90%);
+$GrayishBlue: hsl(219, 14%, 63%);
+$DarkGrayishBlue: hsl(219, 12%, 42%);
+$VeryDarkBlue: hsl(224, 21%, 14%);
+
+// Font Variables
+$fw-500: 500;
+$fw-800: 800;
+
+// Class Variables
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    background: $LightGrayishBlue1;
+    display: grid;
+    place-items: center;
+    padding: 3em;
+
+    & article {
+        position: relative;
+        background: $White;
+        width: 70%;
+        padding: 2em;
+        border-radius: .5em;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, .08);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 4em;
+
+        & .heading {
+            position: relative;
+            @include flex(space-between, center);
+            flex-flow: row wrap;
+
+            & h1 {
+                color: $VeryDarkBlue;
+                display: flex;
+                align-items: center;
+                gap: .4em;
+                flex-flow: row wrap;
+                transition: .5s;
+
+                font: {
+                    size: 2.3em;
+                    weight: $fw-800;
+                }
+
+                &:hover {
+                    color: $Blue;
+
+                    & strong {
+                        background: $VeryDarkBlue;
+                    }
+                }
+
+                & strong {
+                    position: relative;
+                    background: $Blue;
+                    color: $White;
+                    padding: .2em .6em;
+                    border-radius: .4em;
+                    transition: .5s;
+
+                    font: {
+                        size: .7em;
+                        weight: $fw-800;
+                    }
+
+                }
+            }
+
+            & input[type="button"] {
+                background: transparent;
+                border: none;
+                font-size: 1.5em;
+                color: $DarkGrayishBlue;
+                cursor: pointer;
+                transition: .5s;
+
+                &:hover {
+                    color: $Blue;
+                }
+            }
+        }
+
+        & ul {
+            position: relative;
+
+            & li {
+                position: relative;
+                list-style: none;
+                display: flex;
+                border-radius: .5em;
+                gap: 1.2em;
+                padding: 1em;
+                align-items: center;
+                margin-bottom: 1em;
+
+                &:hover {
+                    background: $VeryLightGrayishBlue;
+                }
+
+                &[data-notification-isread="true"] {
+                    background: $LightGrayishBlue2;
+                    transition: .5s;
+
+                    &:hover {
+                        background: $VeryLightGrayishBlue;
+                    }
+                }
+
+                &[data-notification-type="messages"] {
+                    // display: grid;
+                    // grid-template-columns: 1fr;
+                    // grid-gap: 2em;
+                    display: flex;
+                    flex-direction: column;
+
+
+                    & .notification-wrapper {
+                        // display: grid;
+                        // grid-template-columns: max-content 1fr;
+                        // gap: 1.2em;
+                        display: flex;
+                        flex-direction: row;
+                        min-width: 100%;
+                        gap: 1.2em;
+                        align-items: center;
+
+                        & .image-avatar {
+                            position: relative;
+                            width: 3.8em;
+                            height: 3.8em;
+                            border-radius: 50%;
+                            overflow: hidden;
+
+                            & img {
+                                @include absolute();
+                                display: block;
+                                object-fit: contain;
+                                transition: .5s;
+                                border-radius: 50%;
+
+                                &:hover {
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                    }
+
+                    & .notification {
+                        border: 1px dashed $GrayishBlue;
+                        padding: 1.2em;
+                        color: $DarkGrayishBlue;
+                        line-height: 1.6em;
+                        font-size: 1.4em;
+                        cursor: pointer;
+                        transition: .5s;
+
+                        &:hover {
+                            background: $LightGrayishBlue2;
+                        }
+                    }
+                }
+
+                &[data-notification-type="comments"] .text-avatar {
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: row;
+
+                    & .text-avatar-right {
+                        position: relative;
+                        min-width: 3.8em;
+                        min-height: 3.8em;
+
+                        & img {
+                            @include absolute();
+                            object-fit: contain;
+                        }
+                    }
+                }
+
+                &:active {
+                    background: $VeryLightGrayishBlue;
+                }
+
+                & .image-avatar {
+                    position: relative;
+                    min-width: 3.8em;
+                    min-height: 3.8em;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    & img {
+                        @include absolute();
+                        display: block;
+                        object-fit: contain;
+                        transition: .5s;
+                        border-radius: 50%;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                & .text-avatar {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .3em;
+
+                    & .time {
+                        color: $GrayishBlue;
+                    }
+
+                    & p {
+                        font-size: 1.2em;
+                        color: $DarkGrayishBlue;
+
+                        & a {
+                            text-decoration: none;
+                            color: $VeryDarkBlue;
+                            transition: .5s;
+                            font-weight: $fw-800;
+
+                            &:hover,
+                            &:nth-child(2):hover {
+                                color: $Blue;
+                            }
+
+                            &:nth-child(2) {
+                                color: $DarkGrayishBlue;
+                            }
+
+                        }
+
+                        & span {
+                            display: inline-block;
+                            width: 0.7em;
+                            height: 0.7em;
+                            background: hsl(1deg, 90%, 64%);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 61.93em) {
+    main article {
+        min-width: 95%;
+
+        & .heading h1 {
+            font-size: 2em;
+        }
+    }
+}
+
+@media (max-width: 43.75em) {
+    main article ul li[data-notification-type="messages"] .notification {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+
+    main article ul li .text-avatar p {
+        font-size: 1em;
+    }
+
+    main article .heading input[type=button] {
+        font-size: 1.2em;
+    }
+
+    main article .heading h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 35em) {
+
+    main article ul li .image-avatar,
+    main article ul li[data-notification-type=comments] .text-avatar .text-avatar-right {
+        min-width: 3em;
+        min-height: 3em;
+    }
+
+    main article ul li[data-notification-type=messages] .notification {
+        font-size: 1em;
+    }
+
+    main article .heading h1 {
+        font-size: 1.3em;
+    }
+
+    main {
+        padding: 3em 2em;
+
+        & article ul li {
+            padding: .8em;
+        }
+    }
+}
+
+@media (max-width: 28.125em) {
+    main article {
+        padding: 1.5em;
+
+        & .heading input[type=button] {
+            font-size: 1em;
+        }
+
+        & ul li {
+            gap: .5em;
+        }
+    }
+
+    main article .heading h1 {
+        flex-wrap: wrap;
+    }
+
+    main article .heading {
+        flex-flow: unset;
+        align-items: baseline;
+    }
+
+    main article ul li .text-avatar p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 23.43em) {
+    main article .heading {
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    main article .heading h1 {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    main article ul li[data-notification-type=messages] .notification {
+        font-size: .9em;
+    }
+}
