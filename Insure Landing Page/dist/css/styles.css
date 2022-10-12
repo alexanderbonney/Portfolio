@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Epilogue", sans-serif;
+}
+
+input[type=button] {
+  position: relative;
+  padding: 1em 1.5em;
+  background: transparent;
+  border: 2px solid hsl(0deg, 0%, 98%);
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: block;
+}
+input[type=button]:hover {
+  background: #fff;
+  color: hsl(256deg, 26%, 20%);
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  padding: 1.5em 8em;
+}
+main header nav {
+  position: relative;
+}
+main header nav ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main header nav ul li {
+  position: relative;
+  list-style: none;
+  margin: 1em;
+}
+main header nav ul li a {
+  text-decoration: none;
+  color: hsl(273deg, 4%, 51%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+main header nav ul li a:hover {
+  color: hsl(270deg, 9%, 17%);
+}
+main header nav ul li a.active {
+  color: hsl(270deg, 9%, 17%);
+  border: 2px solid hsl(270deg, 9%, 17%);
+  padding: 0.7em 1.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main header nav ul li a.active:hover {
+  background: hsl(270deg, 9%, 17%);
+  color: #fff;
+}
+main .top {
+  position: relative;
+  background: hsl(256deg, 26%, 20%);
+  background: url(/images/bg-pattern-intro-left-desktop.svg), url(/images/bg-pattern-intro-right-desktop.svg) hsl(256deg, 26%, 20%);
+  background-repeat: no-repeat;
+  background-position: left bottom, right top;
+}
+main .top .topSection {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-inline: 8em;
+  gap: 2em;
+  color: #fff;
+  min-height: 85vh;
+}
+main .top .topSection .left {
+  position: relative;
+  width: 50%;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5em;
+}
+main .top .topSection .left span {
+  position: relative;
+  width: 30%;
+  background: hsl(273deg, 4%, 51%);
+  height: 0.2em;
+}
+main .top .topSection .left h1 {
+  font-size: 4.1em;
+  width: 14ch;
+}
+main .top .topSection .left p {
+  font-size: 1em;
+  line-height: 1.8em;
+  color: hsl(0deg, 0%, 98%);
+}
+main .top .topSection .right {
+  position: relative;
+  width: 50%;
+}
+main .top .topSection .right .imgBox {
+  position: absolute;
+  top: -10em;
+  right: 0;
+  height: 550px;
+  width: 100%;
+  background: url(/images/image-intro-desktop.jpg);
+  background-size: cover;
+}
+main .body {
+  position: relative;
+  padding: 15em 8em 0 8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 4em;
+}
+main .body span {
+  position: relative;
+  width: 20%;
+  background: hsl(216deg, 30%, 68%);
+  height: 0.12em;
+}
+main .body h1 {
+  color: hsl(256deg, 26%, 20%);
+  font-size: 3.5em;
+  font-weight: 700;
+}
+main .body .cardContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+}
+main .body .cardContainer .card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
+main .body .cardContainer .card:hover .imgBox img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+main .body .cardContainer .card .imgBox {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .body .cardContainer .card .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+main .body .cardContainer .card .imgBox img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+main .body .cardContainer .card h3 {
+  font-size: 1.7em;
+}
+main .body .cardContainer .card p {
+  font-size: 1em;
+  line-height: 1.8em;
+  color: hsl(273deg, 4%, 51%);
+}
+main .body .container-findmore {
+  position: relative;
+  background: url(/images/bg-pattern-how-we-work-desktop.svg) hsl(256deg, 26%, 20%);
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: 3em;
+}
+main .body .container-findmore div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .body .container-findmore div input {
+  position: relative;
+  display: inline-block;
+  width: 23ch;
+  height: 60px;
+}
+main .body .container-findmore div h1 {
+  color: #fff;
+  font-size: 3em;
+  width: 70%;
+}
+
+footer {
+  position: relative;
+  background: url(/images/bg-pattern-footer-desktop.svg) hsl(0deg, 0%, 98%);
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 4em 8em 2em 8em;
+  margin-top: 8em;
+}
+footer .logo-icons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1em;
+}
+footer .logo-icons .social-media-icons {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .logo-icons .social-media-icons li {
+  position: relative;
+  list-style: none;
+  margin: 0.7em;
+}
+footer .logo-icons .social-media-icons li a {
+  position: relative;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+footer .logo-icons .social-media-icons li a img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+footer .logo-icons .social-media-icons li a:hover img {
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+}
+footer .notification-footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
+  padding-top: 1.5em;
+  gap: 2em 0;
+}
+footer .notification-footer .footer-links {
+  position: relative;
+}
+footer .notification-footer .footer-links li {
+  position: relative;
+  list-style: none;
+  margin: 1.2em 0;
+}
+footer .notification-footer .footer-links li:nth-child(2) {
+  margin: -0.5em 0;
+}
+footer .notification-footer .footer-links li span {
+  color: hsl(273deg, 4%, 51%);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+footer .notification-footer .footer-links li a {
+  text-decoration: none;
+  color: hsl(270deg, 9%, 17%);
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: hsl(256deg, 26%, 20%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+footer .notification-footer .footer-links li a:hover {
+  text-decoration: underline;
+  color: hsl(270deg, 9%, 17%);
+}
+
+@media (max-width: 1116px) {
+  main header {
+    padding: 1.5em 4em;
+  }
+  main .top .topSection {
+    padding-inline: 4em;
+  }
+  main .top .topSection .right .imgBox {
+    top: -12em;
+  }
+  main .top .topSection .left h1 {
+    font-size: 3.6em;
+  }
+  main .body {
+    padding: 15em 4em 0 4em;
+  }
+  footer {
+    padding: 4em 4em 2em 4em;
+  }
+}
+@media (max-width: 991px) {
+  header .nav-toggle {
+    position: fixed;
+    right: 35px;
+    width: 35px;
+    height: 35px;
+    background: url("/images/icon-hamburger.svg") no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    z-index: 10;
+  }
+  header .nav-toggle.active {
+    background: url("/images/icon-close.svg") no-repeat center;
+    background-size: contain;
+  }
+  header .nav-toggle.active ~ nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    background: url(/images/bg-pattern-mobile-nav.svg) hsl(270deg, 9%, 17%);
+    background-repeat: no-repeat;
+    background-position: -20px 390px;
+    background-size: 100%;
+    z-index: 1;
+    width: 100vw;
+    min-height: 100vh;
+  }
+  header .nav-toggle.active ~ nav ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .nav-toggle.active ~ nav ul li {
+    margin: 2em;
+    text-align: center;
+    width: 30ch;
+  }
+  header .nav-toggle.active ~ nav ul li a {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header .nav-toggle.active ~ nav ul li a.active {
+    border: 2px solid #fff;
+  }
+  header .nav-toggle.active ~ nav ul li a.active:hover {
+    background: #fff;
+    color: hsl(256deg, 26%, 20%);
+  }
+  header .nav-toggle.active ~ nav ul li a:hover {
+    letter-spacing: 2px;
+    color: hsl(216deg, 30%, 68%);
+  }
+  footer .notification-footer .footer-links li {
+    text-align: center;
+  }
+  main header nav {
+    display: none;
+  }
+  main .body h1 {
+    text-align: center;
+  }
+  main .body span {
+    width: 30%;
+    margin: auto;
+    margin-bottom: -2em;
+  }
+  main .body .cardContainer .card {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  main .body .container-findmore div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    gap: 1em;
+  }
+  main .body .container-findmore div h1 {
+    width: 100%;
+  }
+}
+@media (max-width: 970px) {
+  main .top .topSection .left h1 {
+    font-size: 3em;
+  }
+}
+@media (max-width: 845px) {
+  main .body .cardContainer {
+    gap: 3em;
+  }
+  main .top .topSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-inline: 0em;
+  }
+  main .top .topSection .left, main .top .topSection .right {
+    width: 100%;
+  }
+  main .top .topSection .left .imgBox, main .top .topSection .right .imgBox {
+    position: relative;
+    top: auto;
+  }
+  main .top .topSection .left {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2em;
+    text-align: center;
+    padding-top: 0;
+  }
+  main .top .topSection .left p {
+    width: 80%;
+  }
+  main .top .topSection .left span {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  main header {
+    padding: 1.5em 2em;
+  }
+  main .body {
+    padding: 10em 2em 0 2em;
+  }
+  main .body h1 {
+    font-size: 3em;
+  }
+  main .body .container-findmore {
+    padding: 2em;
+  }
+  main .body .container-findmore div h1 {
+    font-size: 2.5em;
+  }
+  footer {
+    padding: 4em 2em;
+  }
+  footer .logo-icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1em;
+  }
+  main .top .topSection {
+    gap: 0;
+  }
+  main .top .topSection .left {
+    gap: 1em;
+  }
+}
+@media (max-width: 420px) {
+  main .body .container-findmore div h1 {
+    font-size: 2em;
+  }
+  main .body h1 {
+    font-size: 2.4em;
+  }
+  main .body .cardContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main .top .topSection .left h1 {
+    font-size: 2.4em;
+  }
+  input[type=button] {
+    font-size: 0.8em;
+  }
+  footer .notification-footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 320px) {
+  main .top .topSection .left {
+    min-height: 480px;
+  }
+  main .top .topSection .left h1 {
+    width: 90%;
+    font-size: 2em;
+  }
+}
