@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+main .cardContainer .card ul li {
+  font-weight: 1.5em;
+  font-weight: 700;
+  color: hsl(233deg, 13%, 49%);
+}
+
+.monthly,
+.annually {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  background: url(/images/bg-top.svg), url(/images/bg-bottom.svg), hsl(240deg, 78%, 98%);
+  background-repeat: no-repeat;
+  background-position: top right, bottom left;
+  padding: 3em 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3em;
+}
+main h1 {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 3em;
+  font-weight: 700;
+}
+main .toggle_div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2em;
+}
+main .toggle_div label {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: hsl(233deg, 13%, 49%);
+}
+main .toggle_div input {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  background: hsl(237deg, 63%, 64%);
+}
+main .toggle_div input::before {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 5px;
+}
+main .toggle_div input:checked {
+  background: -webkit-gradient(linear, left top, left bottom, from(hsl(236deg, 72%, 79%)), to(hsl(237deg, 63%, 64%)));
+  background: linear-gradient(hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  opacity: 0.6;
+}
+main .toggle_div input:checked::before {
+  left: 53%;
+}
+main .cardContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .cardContainer .card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2em;
+}
+main .cardContainer .card .card-amount h1 {
+  font-size: 4em;
+}
+main .cardContainer .card:nth-child(2) {
+  height: 500px;
+  width: 340px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(163, 168, 240)), to(rgb(105, 111, 221)));
+  background: linear-gradient(to bottom, rgb(163, 168, 240), rgb(105, 111, 221));
+  z-index: 1;
+  color: #fff;
+}
+main .cardContainer .card:nth-child(2) .card-type, main .cardContainer .card:nth-child(2) .card-amount h1 {
+  color: #fff;
+}
+main .cardContainer .card:nth-child(2) ul li {
+  border-top: 2px solid #fff;
+  color: #fff;
+}
+main .cardContainer .card:nth-child(2) ul li:last-child {
+  border-bottom: 2px solid #fff;
+}
+main .cardContainer .card:nth-child(2) input[type=button] {
+  background: #fff;
+  color: hsl(233deg, 13%, 49%);
+}
+main .cardContainer .card:nth-child(2) input[type=button]:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+main .cardContainer .card .card-amount {
+  position: relative;
+  color: hsl(232deg, 13%, 33%);
+}
+main .cardContainer .card .card-type {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: hsl(233deg, 13%, 49%);
+}
+main .cardContainer .card ul {
+  position: relative;
+  width: 100%;
+}
+main .cardContainer .card ul li {
+  position: relative;
+  border-top: 2px solid rgba(109, 112, 141, 0.36);
+  padding: 1.2em 0 0 0;
+  margin: 1em;
+  text-align: center;
+  list-style: none;
+  color: hsl(233deg, 13%, 49%);
+}
+main .cardContainer .card ul li:last-child {
+  border-bottom: 2px solid rgba(109, 112, 141, 0.36);
+  padding: 1.2em 0 1.2em 0;
+}
+main .cardContainer .card input[type=button] {
+  position: relative;
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(hsl(236deg, 72%, 79%)), to(hsl(237deg, 63%, 64%)));
+  background: linear-gradient(to right, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  border: none;
+  cursor: pointer;
+  border-radius: 0.4em;
+  -webkit-transition: 0.5s border;
+  transition: 0.5s border;
+}
+main .cardContainer .card input[type=button]:hover {
+  border: 1px solid hsl(233deg, 13%, 49%);
+  background: transparent;
+  color: hsl(233deg, 13%, 49%);
+}
+
+@media (max-width: 1116px) {
+  main {
+    padding: 5em 2em;
+  }
+  main .cardContainer {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .cardContainer .card {
+    width: 270px;
+  }
+  main .cardContainer .card:nth-child(2) {
+    width: 300px;
+  }
+}
+@media (max-width: 1000px) {
+  main .cardContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  main .cardContainer .card {
+    width: 300px;
+    height: 400px;
+  }
+}
+@media (max-width: 420px) {
+  main h1 {
+    font-size: 2.2em;
+  }
+  main .cardContainer .card {
+    width: 80%;
+  }
+  main .cardContainer .card .card-amount h1 {
+    font-size: 3em;
+  }
+  main .cardContainer .card:nth-child(2) {
+    width: 80%;
+  }
+  main .toggle_div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
