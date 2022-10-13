@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+
+// Mixins
+
+@mixin flex ($x, $y) {
+    display: flex;
+    justify-content: $x;
+    align-items: $y;
+}
+
+@mixin absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// Primary Colour Variables
+$LimeGreen: hsl(163, 72%, 41%);
+$BrightRed: hsl(356, 69%, 56%);
+
+//Social Media Colours
+$Facebook: hsl(208, 92%, 53%);
+$Twitter: hsl(203, 89%, 53%);
+$Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$YouTube: hsl(348, 97%, 39%);
+
+//Dark Theme Colours
+$VeryDarkBlue: hsl(230, 17%, 14%);
+$VeryDarkBlue1: hsl(232, 19%, 15%);
+$DarkDesaturatedBlue: hsl(228, 28%, 20%);
+$DesaturatedBlue: hsl(228, 34%, 66%);
+$WhiteText: hsl(0, 0%, 100%);
+$DarkToggle1: hsl(210, 78%, 56%);
+$DarkToggle2: hsl(146, 68%, 55%);
+
+
+// White Theme Colours  
+$WhiteBackground: hsl(0, 0%, 100%);
+$VeryPaleBlue: hsl(225, 100%, 98%);
+$LightGrayishBlue: hsl(227, 47%, 96%);
+$DarkGrayishBlue: hsl(228, 12%, 44%);
+$WhiteToggle: hsl(230, 22%, 74%);
+
+// Font Variables
+$fw-400: 400;
+$fw-700: 700;
+
+// Class Variables
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    background: $WhiteBackground;
+    padding: 3em 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    &.light {
+        background: $VeryDarkBlue;
+
+        &::before {
+            background: $VeryDarkBlue1;
+        }
+
+        & .header-container .header-container-left p,
+        & .header-container .header-container-right label,
+        & .sm-card-container .sm-card .sm-card-socialUser p,
+        & .analytics-card-section .analytics-card p {
+            color: $DesaturatedBlue;
+        }
+
+        & .header-container .header-container-left h1,
+        & .sm-card-container .sm-card h2,
+        & .analytics-card-section .analytics-card h3,
+        & h2 {
+            color: $WhiteText;
+        }
+
+        & .sm-card-container .sm-card .followers {
+            color: $DesaturatedBlue;
+        }
+
+        & .analytics-card-section .analytics-card,
+        & .sm-card-container .sm-card {
+            background: $DarkDesaturatedBlue;
+
+            &:hover {
+                background: #333A55;
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background: $VeryPaleBlue;
+        border-radius: 0 0 3em 3em;
+    }
+
+    & .header-container {
+        position: relative;
+        @include flex(space-between, flex-start);
+
+
+        & .header-container-left {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: .5em;
+            color: $VeryDarkBlue;
+
+            & p {
+                font-weight: $fw-700;
+                color: $DarkGrayishBlue;
+            }
+        }
+
+        & .header-container-right {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            & label {
+                font-weight: $fw-700;
+                color: $DarkGrayishBlue;
+            }
+
+            & input[type="checkbox"] {
+                position: relative;
+                appearance: none;
+                background: $WhiteToggle;
+                width: 60px;
+                height: 30px;
+                border-radius: 30px;
+                transition: .5s;
+                cursor: pointer;
+
+                &:hover {
+                    background: linear-gradient($DarkToggle1, $DarkToggle2);
+
+                    &::before {
+                        background: $VeryDarkBlue;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 23px;
+                    height: 23px;
+                    background: $WhiteBackground;
+                    border-radius: 50%;
+                    inset: 2.5px;
+                    transition: .5s;
+                }
+
+                &:checked {
+                    background: linear-gradient($DarkToggle1, $DarkToggle2);
+
+                    &::before {
+                        left: 56%;
+                        background: $VeryDarkBlue;
+                    }
+                }
+            }
+        }
+    }
+
+    & .sm-card-container {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
+        gap: 2em;
+
+
+        & .sm-card {
+            position: relative;
+            background: $LightGrayishBlue;
+            padding: 2em;
+            border-radius: .4em;
+            @include flex(space-between, center);
+            flex-direction: column;
+            gap: 1em;
+            transition: .2s;
+            cursor: pointer;
+
+
+            &:hover {
+                background: $VeryPaleBlue;
+                box-shadow: 10px 10px 30px rgba(0, 0, 0, .04);
+            }
+
+            @for $i from 1 to 5 {
+                $colours: hsl(208, 92%, 53%) hsl(203, 89%, 53%) linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) hsl(348, 97%, 39%);
+
+                &:nth-child(#{$i})::before {
+                    background: nth($list: $colours, $n: $i);
+
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 3%;
+                border-radius: .4em .4em 0 0;
+                background: rebeccapurple;
+            }
+
+            & h2 {
+                font-size: 4em;
+                color: $VeryDarkBlue;
+            }
+
+            & .followers {
+                letter-spacing: 5px;
+                font-size: .9em;
+                font-weight: $fw-400;
+                color: $DarkGrayishBlue;
+                margin-top: -1.2em;
+                text-transform: uppercase;
+            }
+
+            & .sm-card-socialUser {
+                position: relative;
+                display: flex;
+                gap: .5em;
+            }
+
+            & .sm-card-rating {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: .4em;
+
+                & small {
+                    color: $LimeGreen;
+                    font-weight: $fw-700;
+                }
+            }
+        }
+    }
+
+    & .analytics-card-section {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 8fr));
+        gap: 2em;
+
+        & .analytics-card {
+            position: relative;
+            background: $VeryPaleBlue;
+            padding: 1.5em;
+            border-radius: .5em;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            transition: .5s;
+            cursor: pointer;
+
+            &:hover {
+                background: $LightGrayishBlue;
+            }
+
+            & h3 {
+                font-size: 2.2em;
+                color: $VeryDarkBlue;
+            }
+
+            & p {
+                font-weight: $fw-700;
+                color: $DarkGrayishBlue;
+            }
+
+            & div {
+                @include flex(space-between, center);
+                gap: .3em;
+
+                & small {
+                    font-weight: $fw-700;
+                    color: $LimeGreen;
+                }
+            }
+
+            & .analytics-card-top,
+            & .analytics-card-bottom {
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+
+    main {
+        padding: 3em;
+    }
+
+    main .header-container {
+        flex-direction: column;
+        gap: 3em;
+        padding-top: 2em;
+    }
+
+    main .header-container .header-container-right {
+        width: 100%;
+        justify-content: space-between;
+        border-top: 2px solid $DarkGrayishBlue;
+        padding-top: 1em;
+        margin-bottom: 2em;
+    }
+}
+
+@media (max-width: 643px) {
+    main::before {
+        height: 15%;
+    }
+}
+
+@media (max-width: 530px) {
+    main .header-container .header-container-left h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 430px) {
+
+    main {
+        padding: 1em;
+    }
+
+    main .header-container .header-container-left h1 {
+        font-size: 1.25em;
+        text-align: center;
+    }
+
+    main .sm-card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
